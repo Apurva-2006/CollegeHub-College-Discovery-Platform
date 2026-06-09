@@ -1,0 +1,1367 @@
+[
+  {
+    "id": "btech-cse-iit-madras",
+    "collegeId": "iit-madras",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 880000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Artificial Intelligence",
+      "Data Science"
+    ],
+    "seats": 180,
+    "description": "Flagship undergraduate program in computer science offering rigorous foundations and cutting-edge electives.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-vit-vellore",
+    "collegeId": "vit-vellore",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1180000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% in PCM",
+    "entranceExams": [
+      "VITEEE"
+    ],
+    "specializations": [
+      "Information Security",
+      "Internet of Things"
+    ],
+    "seats": 1200,
+    "description": "Highly sought-after engineering program with flexible credit systems and excellent placement opportunities.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-iit-bombay",
+    "collegeId": "iit-bombay",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 900000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Machine Learning",
+      "Cryptography"
+    ],
+    "seats": 171,
+    "description": "India's most competitive computer science program attracting the top tier of JEE Advanced rankers.",
+    "featured": true
+  },
+  {
+    "id": "btech-mech-coep-pune",
+    "collegeId": "coep-pune",
+    "courseName": "B.Tech Mechanical Engineering",
+    "shortName": "B.Tech Mech",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 460000,
+    "currency": "INR",
+    "eligibility": "10+2 with 45% in PCM",
+    "entranceExams": [
+      "MHT CET",
+      "JEE Main"
+    ],
+    "specializations": [
+      "Automobile Engineering",
+      "Thermal Engineering"
+    ],
+    "seats": 150,
+    "description": "Legacy program known for strong industrial ties in the Pune manufacturing hub.",
+    "featured": false
+  },
+  {
+    "id": "bsc-research-iisc-bangalore",
+    "collegeId": "iisc-bangalore",
+    "courseName": "Bachelor of Science (Research)",
+    "shortName": "B.Sc (Research)",
+    "degreeLevel": "Undergraduate",
+    "stream": "Science",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 200000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% in PCM/PCB",
+    "entranceExams": [
+      "JEE Advanced",
+      "JEE Main",
+      "IISER Aptitude"
+    ],
+    "specializations": [
+      "Physics",
+      "Mathematics",
+      "Earth & Environmental Science"
+    ],
+    "seats": 120,
+    "description": "Interdisciplinary science program geared toward deep research and academic excellence.",
+    "featured": true
+  },
+  {
+    "id": "btech-it-nit-surathkal",
+    "collegeId": "nit-surathkal",
+    "courseName": "B.Tech Information Technology",
+    "shortName": "B.Tech IT",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Cloud Computing",
+      "Software Engineering"
+    ],
+    "seats": 110,
+    "description": "Premium IT course focusing on modern software practices and phenomenal placement conversions.",
+    "featured": true
+  },
+  {
+    "id": "pgp-iim-ahmedabad",
+    "collegeId": "iim-ahmedabad",
+    "courseName": "Post Graduate Program in Management",
+    "shortName": "PGP",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 2500000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "CAT"
+    ],
+    "specializations": [
+      "Finance",
+      "Marketing",
+      "Strategy"
+    ],
+    "seats": 385,
+    "description": "A globally renowned management program employing a rigorous case-study methodology.",
+    "featured": true
+  },
+  {
+    "id": "btech-civil-svnit-surat",
+    "collegeId": "svnit-surat",
+    "courseName": "B.Tech Civil Engineering",
+    "shortName": "B.Tech Civil",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 480000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Structural Engineering",
+      "Urban Planning"
+    ],
+    "seats": 120,
+    "description": "Core engineering program with intensive laboratory and field work.",
+    "featured": false
+  },
+  {
+    "id": "btech-ee-iit-kanpur",
+    "collegeId": "iit-kanpur",
+    "courseName": "B.Tech Electrical Engineering",
+    "shortName": "B.Tech EE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 850000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Microelectronics",
+      "Power Systems"
+    ],
+    "seats": 140,
+    "description": "Intensive electrical engineering curriculum known for strong faculty and core sector placements.",
+    "featured": true
+  },
+  {
+    "id": "pgpm-iim-lucknow",
+    "collegeId": "iim-lucknow",
+    "courseName": "Post Graduate Program in Management",
+    "shortName": "PGPM",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 2100000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "CAT"
+    ],
+    "specializations": [
+      "Operations",
+      "Human Resources",
+      "Finance"
+    ],
+    "seats": 430,
+    "description": "Top-tier management program offering diverse specializations and industry-focused pedagogy.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-iit-kharagpur",
+    "collegeId": "iit-kharagpur",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 850000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Computer Architecture",
+      "Software Systems"
+    ],
+    "seats": 85,
+    "description": "Comprehensive computing program at India's oldest IIT with high global demand.",
+    "featured": true
+  },
+  {
+    "id": "be-ece-jadavpur-university",
+    "collegeId": "jadavpur-university",
+    "courseName": "B.E. Electronics and Telecommunication Engineering",
+    "shortName": "B.E. ECE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 40000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% in PCM",
+    "entranceExams": [
+      "WBJEE"
+    ],
+    "specializations": [
+      "VLSI Design",
+      "Signal Processing"
+    ],
+    "seats": 60,
+    "description": "Highly reputable electronics program offering the best ROI in the country.",
+    "featured": false
+  },
+  {
+    "id": "be-cse-bits-pilani",
+    "collegeId": "bits-pilani",
+    "courseName": "B.E. Computer Science",
+    "shortName": "B.E. CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 2500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "BITSAT"
+    ],
+    "specializations": [
+      "Algorithms",
+      "Network Security"
+    ],
+    "seats": 160,
+    "description": "Industry-oriented curriculum with unique Practice School internships.",
+    "featured": true
+  },
+  {
+    "id": "barch-mnit-jaipur",
+    "collegeId": "mnit-jaipur",
+    "courseName": "Bachelor of Architecture",
+    "shortName": "B.Arch",
+    "degreeLevel": "Undergraduate",
+    "stream": "Architecture",
+    "duration": 5,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 650000,
+    "currency": "INR",
+    "eligibility": "10+2 with 50% in PCM",
+    "entranceExams": [
+      "JEE Main Paper 2"
+    ],
+    "specializations": [
+      "Urban Design",
+      "Sustainable Architecture"
+    ],
+    "seats": 75,
+    "description": "One of the top architectural programs in the western region.",
+    "featured": false
+  },
+  {
+    "id": "btech-ai-iit-hyderabad",
+    "collegeId": "iit-hyderabad",
+    "courseName": "B.Tech Artificial Intelligence",
+    "shortName": "B.Tech AI",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 880000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Deep Learning",
+      "Robotics"
+    ],
+    "seats": 40,
+    "description": "India's first B.Tech in Artificial Intelligence, setting the benchmark for AI education.",
+    "featured": true
+  },
+  {
+    "id": "btech-ece-nit-warangal",
+    "collegeId": "nit-warangal",
+    "courseName": "B.Tech Electronics and Communication Engineering",
+    "shortName": "B.Tech ECE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Embedded Systems",
+      "Telecommunication"
+    ],
+    "seats": 100,
+    "description": "Renowned electronics program with exceptional core company placements.",
+    "featured": false
+  },
+  {
+    "id": "btech-cse-thapar-institute",
+    "collegeId": "thapar-institute",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1600000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Full Stack Development",
+      "Cybersecurity"
+    ],
+    "seats": 800,
+    "description": "Massive computing department providing extensive exposure and tech placements.",
+    "featured": false
+  },
+  {
+    "id": "btech-chem-nit-jalandhar",
+    "collegeId": "nit-jalandhar",
+    "courseName": "B.Tech Chemical Engineering",
+    "shortName": "B.Tech Chemical",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Process Engineering",
+      "Petrochemicals"
+    ],
+    "seats": 90,
+    "description": "Solid chemical engineering foundation leading to strong PSU and core placements.",
+    "featured": false
+  },
+  {
+    "id": "btech-mech-nit-calicut",
+    "collegeId": "nit-calicut",
+    "courseName": "B.Tech Mechanical Engineering",
+    "shortName": "B.Tech Mech",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Design and Manufacturing",
+      "Thermal Sciences"
+    ],
+    "seats": 150,
+    "description": "Rigorous mechanical program with state-of-the-art laboratory infrastructure.",
+    "featured": false
+  },
+  {
+    "id": "pgp-iim-kozhikode",
+    "collegeId": "iim-kozhikode",
+    "courseName": "Post Graduate Program in Management",
+    "shortName": "PGP",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 2050000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "CAT"
+    ],
+    "specializations": [
+      "Finance",
+      "Marketing",
+      "IT & Analytics"
+    ],
+    "seats": 480,
+    "description": "Distinguished management program set in a scenic campus with strong global ties.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-iit-tirupati",
+    "collegeId": "iit-tirupati",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 840000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Software Engineering",
+      "Computer Networks"
+    ],
+    "seats": 60,
+    "description": "Rigorous computing program at a fast-growing third-generation IIT with strong focus on applied research.",
+    "featured": false
+  },
+  {
+    "id": "btech-cse-kl-university",
+    "collegeId": "kl-university",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1400000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% in PCM",
+    "entranceExams": [
+      "KLEEE",
+      "JEE Main"
+    ],
+    "specializations": [
+      "Artificial Intelligence",
+      "Cloud & Edge Computing"
+    ],
+    "seats": 1500,
+    "description": "High-volume flagship program known for excellent industry tie-ups and mass placements.",
+    "featured": true
+  },
+  {
+    "id": "btech-ai-iit-patna",
+    "collegeId": "iit-patna",
+    "courseName": "B.Tech Artificial Intelligence and Data Science",
+    "shortName": "B.Tech AI & DS",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 800000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Machine Learning",
+      "Big Data Analytics"
+    ],
+    "seats": 50,
+    "description": "Cutting-edge undergraduate degree focusing on next-generation artificial intelligence technologies.",
+    "featured": true
+  },
+  {
+    "id": "btech-civil-nit-patna",
+    "collegeId": "nit-patna",
+    "courseName": "B.Tech Civil Engineering",
+    "shortName": "B.Tech Civil",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Structural Engineering",
+      "Transportation Engineering"
+    ],
+    "seats": 120,
+    "description": "Legacy core engineering program leveraging the institute's historic roots on the banks of the Ganges.",
+    "featured": false
+  },
+  {
+    "id": "btech-mech-iit-indore",
+    "collegeId": "iit-indore",
+    "courseName": "B.Tech Mechanical Engineering",
+    "shortName": "B.Tech Mech",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 880000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Thermal Sciences",
+      "Design & Manufacturing"
+    ],
+    "seats": 85,
+    "description": "Highly cited research-driven mechanical engineering program with state-of-the-art facilities.",
+    "featured": false
+  },
+  {
+    "id": "ipm-iim-indore",
+    "collegeId": "iim-indore",
+    "courseName": "Integrated Programme in Management",
+    "shortName": "IPM",
+    "degreeLevel": "Integrated",
+    "stream": "Management",
+    "duration": 5,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 3500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% aggregate",
+    "entranceExams": [
+      "IPMAT"
+    ],
+    "specializations": [
+      "Finance",
+      "Marketing",
+      "Operations"
+    ],
+    "seats": 150,
+    "description": "Pioneering 5-year integrated management program for high-school graduates.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-nit-rourkela",
+    "collegeId": "nit-rourkela",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Information Security",
+      "Data Science"
+    ],
+    "seats": 110,
+    "description": "Premier computing program at one of India's largest and top-ranked engineering campuses.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-kiit-bhubaneswar",
+    "collegeId": "kiit-bhubaneswar",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1800000,
+    "currency": "INR",
+    "eligibility": "10+2 with 60% in PCM",
+    "entranceExams": [
+      "KIITEE"
+    ],
+    "specializations": [
+      "Cyber Security",
+      "Cloud Computing"
+    ],
+    "seats": 2000,
+    "description": "Flagship private engineering program providing massive placement opportunities across tech sectors.",
+    "featured": false
+  },
+  {
+    "id": "bdes-iit-guwahati",
+    "collegeId": "iit-guwahati",
+    "courseName": "Bachelor of Design",
+    "shortName": "B.Des",
+    "degreeLevel": "Undergraduate",
+    "stream": "Design",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 880000,
+    "currency": "INR",
+    "eligibility": "10+2 in any stream",
+    "entranceExams": [
+      "UCEED"
+    ],
+    "specializations": [
+      "Product Design",
+      "Communication Design"
+    ],
+    "seats": 56,
+    "description": "Renowned design program combining aesthetics, technology, and ergonomics at a premier IIT.",
+    "featured": true
+  },
+  {
+    "id": "btech-ece-nit-silchar",
+    "collegeId": "nit-silchar",
+    "courseName": "B.Tech Electronics and Communication Engineering",
+    "shortName": "B.Tech ECE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "VLSI Design",
+      "Embedded Systems"
+    ],
+    "seats": 140,
+    "description": "Strong electronics curriculum with excellent track records in both core and software placements.",
+    "featured": false
+  },
+  {
+    "id": "btech-it-nit-kurukshetra",
+    "collegeId": "nit-kurukshetra",
+    "courseName": "B.Tech Information Technology",
+    "shortName": "B.Tech IT",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Software Engineering",
+      "Network Security"
+    ],
+    "seats": 120,
+    "description": "Highly sought-after IT program in North India known for producing top-tier software engineers.",
+    "featured": false
+  },
+  {
+    "id": "ba-econ-ashoka-university",
+    "collegeId": "ashoka-university",
+    "courseName": "B.A. (Hons.) Economics",
+    "shortName": "BA Economics",
+    "degreeLevel": "Undergraduate",
+    "stream": "Arts",
+    "duration": 3,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 2700000,
+    "currency": "INR",
+    "eligibility": "10+2 in any stream",
+    "entranceExams": [
+      "AAT",
+      "SAT"
+    ],
+    "specializations": [
+      "Quantitative Economics",
+      "Development Economics"
+    ],
+    "seats": 150,
+    "description": "Elite liberal arts economics program providing world-class faculty and global consulting placements.",
+    "featured": true
+  },
+  {
+    "id": "btech-mining-nit-raipur",
+    "collegeId": "nit-raipur",
+    "courseName": "B.Tech Mining Engineering",
+    "shortName": "B.Tech Mining",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Mine Planning",
+      "Rock Mechanics"
+    ],
+    "seats": 90,
+    "description": "Specialized core engineering program leveraging Chhattisgarh's rich mineral and mining ecosystem.",
+    "featured": false
+  },
+  {
+    "id": "pgp-iim-raipur",
+    "collegeId": "iim-raipur",
+    "courseName": "Post Graduate Program in Management",
+    "shortName": "PGP",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1800000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "CAT"
+    ],
+    "specializations": [
+      "Strategy",
+      "Finance",
+      "Marketing"
+    ],
+    "seats": 260,
+    "description": "Rapidly rising new IIM offering a modern curriculum and exceptional return on investment.",
+    "featured": true
+  },
+  {
+    "id": "btech-petro-iit-ism-dhanbad",
+    "collegeId": "iit-ism-dhanbad",
+    "courseName": "B.Tech Petroleum Engineering",
+    "shortName": "B.Tech Petroleum",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 840000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Reservoir Engineering",
+      "Drilling Engineering"
+    ],
+    "seats": 90,
+    "description": "Legacy earth sciences program offering unparalleled access to public sector and global energy giants.",
+    "featured": true
+  },
+  {
+    "id": "pgdm-hrm-xlri-jamshedpur",
+    "collegeId": "xlri-jamshedpur",
+    "courseName": "PGDM in Human Resource Management",
+    "shortName": "PGDM HRM",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 2800000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "XAT",
+      "GMAT"
+    ],
+    "specializations": [
+      "Human Resources",
+      "Industrial Relations"
+    ],
+    "seats": 180,
+    "description": "The best Human Resources Management program in the Asia-Pacific region.",
+    "featured": true
+  },
+  {
+    "id": "barch-iit-roorkee",
+    "collegeId": "iit-roorkee",
+    "courseName": "Bachelor of Architecture",
+    "shortName": "B.Arch",
+    "degreeLevel": "Undergraduate",
+    "stream": "Architecture",
+    "duration": 5,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1100000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced",
+      "AAT"
+    ],
+    "specializations": [
+      "Urban Design",
+      "Landscape Architecture"
+    ],
+    "seats": 30,
+    "description": "Highly prestigious and oldest architectural department in India.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-upes-dehradun",
+    "collegeId": "upes-dehradun",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1800000,
+    "currency": "INR",
+    "eligibility": "10+2 with 50% in PCM",
+    "entranceExams": [
+      "UPESEAT",
+      "JEE Main"
+    ],
+    "specializations": [
+      "Oil & Gas Informatics",
+      "Cybersecurity and Forensics"
+    ],
+    "seats": 400,
+    "description": "Unique domain-specialized computing program set in the scenic Himalayan foothills.",
+    "featured": false
+  },
+  {
+    "id": "btech-ds-iit-mandi",
+    "collegeId": "iit-mandi",
+    "courseName": "B.Tech Data Science and Engineering",
+    "shortName": "B.Tech DSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 880000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Advanced"
+    ],
+    "specializations": [
+      "Data Analytics",
+      "Machine Learning"
+    ],
+    "seats": 40,
+    "description": "Pioneering undergraduate program focused heavily on applied data science and artificial intelligence.",
+    "featured": false
+  },
+  {
+    "id": "btech-cse-nit-hamirpur",
+    "collegeId": "nit-hamirpur",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Software Engineering",
+      "Computer Networks"
+    ],
+    "seats": 120,
+    "description": "Competitive computing program nestled in one of the most picturesque campuses in India.",
+    "featured": false
+  },
+  {
+    "id": "btech-cse-nit-goa",
+    "collegeId": "nit-goa",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Software Engineering",
+      "Artificial Intelligence"
+    ],
+    "seats": 38,
+    "description": "A highly competitive computing program located in the vibrant state of Goa, known for strong placements.",
+    "featured": true
+  },
+  {
+    "id": "pgdm-gim-goa",
+    "collegeId": "gim-goa",
+    "courseName": "Post Graduate Diploma in Management",
+    "shortName": "PGDM",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1830000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "CAT",
+      "XAT",
+      "GMAT"
+    ],
+    "specializations": [
+      "Marketing",
+      "Finance",
+      "Operations"
+    ],
+    "seats": 300,
+    "description": "Flagship management program renowned for its scenic campus and rigorous industry-aligned curriculum.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-nit-arunachal",
+    "collegeId": "nit-arunachal-pradesh",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Data Science",
+      "Cyber Security"
+    ],
+    "seats": 40,
+    "description": "Core computing program in the northeastern hills offering growing research opportunities.",
+    "featured": false
+  },
+  {
+    "id": "ma-polsc-rgu-arunachal",
+    "collegeId": "rgu-arunachal",
+    "courseName": "M.A. Political Science",
+    "shortName": "M.A. Pol Sci",
+    "degreeLevel": "Postgraduate",
+    "stream": "Arts",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 30000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree in relevant subject",
+    "entranceExams": [
+      "CUET PG"
+    ],
+    "specializations": [
+      "International Relations",
+      "Public Administration"
+    ],
+    "seats": 60,
+    "description": "A premier humanities postgraduate program offering deep insights into regional and global politics.",
+    "featured": false
+  },
+  {
+    "id": "btech-ece-nit-manipur",
+    "collegeId": "nit-manipur",
+    "courseName": "B.Tech Electronics and Communication Engineering",
+    "shortName": "B.Tech ECE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "VLSI Design",
+      "Signal Processing"
+    ],
+    "seats": 45,
+    "description": "Top-tier electronics program focusing on modern communication systems and hardware design.",
+    "featured": false
+  },
+  {
+    "id": "msc-chem-manipur-univ",
+    "collegeId": "manipur-university",
+    "courseName": "M.Sc. Chemistry",
+    "shortName": "M.Sc. Chemistry",
+    "degreeLevel": "Postgraduate",
+    "stream": "Science",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 40000,
+    "currency": "INR",
+    "eligibility": "B.Sc. Chemistry with 50%",
+    "entranceExams": [
+      "CUET PG"
+    ],
+    "specializations": [
+      "Organic Chemistry",
+      "Physical Chemistry"
+    ],
+    "seats": 50,
+    "description": "Advanced science program designed to cultivate research skills in chemical sciences.",
+    "featured": false
+  },
+  {
+    "id": "pgp-iim-shillong",
+    "collegeId": "iim-shillong",
+    "courseName": "Post Graduate Program in Management",
+    "shortName": "PGP",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1500000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "CAT"
+    ],
+    "specializations": [
+      "Consulting",
+      "Sustainability",
+      "Finance"
+    ],
+    "seats": 250,
+    "description": "Known as the 'Campus in the Clouds', offering exceptional placements and a focus on sustainable business practices.",
+    "featured": true
+  },
+  {
+    "id": "btech-civil-nit-meghalaya",
+    "collegeId": "nit-meghalaya",
+    "courseName": "B.Tech Civil Engineering",
+    "shortName": "B.Tech Civil",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Structural Engineering",
+      "Geotechnical Engineering"
+    ],
+    "seats": 30,
+    "description": "Core civil engineering program well-suited to address the unique infrastructural challenges of the hilly terrain.",
+    "featured": false
+  },
+  {
+    "id": "btech-mech-nit-mizoram",
+    "collegeId": "nit-mizoram",
+    "courseName": "B.Tech Mechanical Engineering",
+    "shortName": "B.Tech Mech",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Thermal Engineering",
+      "Manufacturing Science"
+    ],
+    "seats": 30,
+    "description": "Comprehensive mechanical engineering program preparing students for diverse core industries.",
+    "featured": false
+  },
+  {
+    "id": "mba-mizoram-univ",
+    "collegeId": "mizoram-university",
+    "courseName": "Master of Business Administration",
+    "shortName": "MBA",
+    "degreeLevel": "Postgraduate",
+    "stream": "Management",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 60000,
+    "currency": "INR",
+    "eligibility": "Bachelor's Degree with 50%",
+    "entranceExams": [
+      "MAT",
+      "CUET PG"
+    ],
+    "specializations": [
+      "Human Resource Management",
+      "Marketing"
+    ],
+    "seats": 40,
+    "description": "Affordable and highly reputable postgraduate management program serving the northeastern region.",
+    "featured": false
+  },
+  {
+    "id": "btech-eee-nit-nagaland",
+    "collegeId": "nit-nagaland",
+    "courseName": "B.Tech Electrical and Electronics Engineering",
+    "shortName": "B.Tech EEE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Power Systems",
+      "Control Systems"
+    ],
+    "seats": 30,
+    "description": "A robust electrical engineering foundation aimed at creating future power and electronics experts.",
+    "featured": false
+  },
+  {
+    "id": "bsc-agri-nagaland-univ",
+    "collegeId": "nagaland-university",
+    "courseName": "B.Sc. (Hons.) Agriculture",
+    "shortName": "B.Sc. Agriculture",
+    "degreeLevel": "Undergraduate",
+    "stream": "Science",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 50000,
+    "currency": "INR",
+    "eligibility": "10+2 with PCB/PCM",
+    "entranceExams": [
+      "CUET"
+    ],
+    "specializations": [
+      "Agronomy",
+      "Horticulture"
+    ],
+    "seats": 60,
+    "description": "A vital agricultural program addressing the ecological and farming needs of the region.",
+    "featured": false
+  },
+  {
+    "id": "btech-cse-nit-sikkim",
+    "collegeId": "nit-sikkim",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Cloud Computing",
+      "Machine Learning"
+    ],
+    "seats": 45,
+    "description": "High-performing computer science program set against the backdrop of the serene Himalayas.",
+    "featured": true
+  },
+  {
+    "id": "btech-cse-smit-sikkim",
+    "collegeId": "smit-sikkim",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 1280000,
+    "currency": "INR",
+    "eligibility": "10+2 with 50% in PCM",
+    "entranceExams": [
+      "SMIT Online Test",
+      "JEE Main"
+    ],
+    "specializations": [
+      "AI & Data Science",
+      "Internet of Things"
+    ],
+    "seats": 180,
+    "description": "Highly acclaimed private engineering program with impressive corporate tie-ups and lab infrastructure.",
+    "featured": false
+  },
+  {
+    "id": "btech-cse-nit-agartala",
+    "collegeId": "nit-agartala",
+    "courseName": "B.Tech Computer Science and Engineering",
+    "shortName": "B.Tech CSE",
+    "degreeLevel": "Undergraduate",
+    "stream": "Engineering",
+    "duration": 4,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 500000,
+    "currency": "INR",
+    "eligibility": "10+2 with 75% in PCM",
+    "entranceExams": [
+      "JEE Main"
+    ],
+    "specializations": [
+      "Data Analytics",
+      "Software Systems"
+    ],
+    "seats": 150,
+    "description": "The largest and most in-demand program at NIT Agartala with stellar software placement records.",
+    "featured": true
+  },
+  {
+    "id": "msc-it-tripura-univ",
+    "collegeId": "tripura-university",
+    "courseName": "M.Sc. Information Technology",
+    "shortName": "M.Sc. IT",
+    "degreeLevel": "Postgraduate",
+    "stream": "Science",
+    "duration": 2,
+    "durationUnit": "Years",
+    "mode": "Full Time",
+    "totalFee": 40000,
+    "currency": "INR",
+    "eligibility": "B.Sc. IT/CS or BCA with 50%",
+    "entranceExams": [
+      "CUET PG"
+    ],
+    "specializations": [
+      "Cyber Security",
+      "Software Development"
+    ],
+    "seats": 40,
+    "description": "A popular postgraduate program equipping students with advanced IT concepts and practical skills.",
+    "featured": false
+  }
+]
+

@@ -1,0 +1,3015 @@
+[
+  {
+    "id": "iit-madras",
+    "slug": "iit-madras",
+    "name": "Indian Institute of Technology Madras",
+    "shortName": "IIT Madras",
+    "website": "https://www.iitm.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/6/69/IIT_Madras_Logo.svg",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "location": "Chennai, Tamil Nadu",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC A++",
+      "NBA"
+    ],
+    "establishedYear": 1959,
+    "campusArea": 617,
+    "campusAreaUnit": "acres",
+    "description": "Consistently ranked #1 in NIRF for engineering, IIT Madras is renowned for its research output, sprawling green campus, and incubation ecosystem.",
+    "nirfRank": 1,
+    "stateRank": 1,
+    "qsRank": 285,
+    "overallRating": 4.8,
+    "reviewCount": 2680,
+    "averagePackage": 2420000,
+    "highestPackage": 19600000,
+    "placementPercentage": 97,
+    "startingFee": 220000,
+    "highestCourseFee": 320000,
+    "popularCourses": [
+      "B.Tech",
+      "Dual Degree",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Qualcomm",
+      "Texas Instruments",
+      "Goldman Sachs",
+      "Uber",
+      "Flipkart"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "HSEE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "vit-vellore",
+    "slug": "vit-vellore",
+    "name": "Vellore Institute of Technology",
+    "shortName": "VIT",
+    "website": "https://vit.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c5/Vellore_Institute_of_Technology_seal_2017.svg",
+    "city": "Vellore",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "location": "Vellore, Tamil Nadu",
+    "ownership": "Private",
+    "accreditation": [
+      "NAAC A++",
+      "NBA",
+      "ABET"
+    ],
+    "establishedYear": 1984,
+    "campusArea": 372,
+    "campusAreaUnit": "acres",
+    "description": "A premier private engineering institution known for its state-of-the-art infrastructure and excellent placement records.",
+    "nirfRank": 13,
+    "stateRank": 2,
+    "qsRank": 850,
+    "overallRating": 4.3,
+    "reviewCount": 4870,
+    "averagePackage": 850000,
+    "highestPackage": 7000000,
+    "placementPercentage": 88,
+    "startingFee": 198000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "BBA",
+      "BCA"
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Wipro"
+    ],
+    "examsAccepted": [
+      "VITEEE",
+      "JEE Main"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iit-bombay",
+    "slug": "iit-bombay",
+    "name": "Indian Institute of Technology Bombay",
+    "shortName": "IIT Bombay",
+    "website": "https://www.iitb.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India",
+    "location": "Mumbai, Maharashtra",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A++"
+    ],
+    "establishedYear": 1958,
+    "campusArea": 550,
+    "campusAreaUnit": "acres",
+    "description": "A global leader in engineering education and research, situated in the financial capital of India.",
+    "nirfRank": 3,
+    "stateRank": 1,
+    "qsRank": 149,
+    "overallRating": 4.8,
+    "reviewCount": 12000,
+    "averagePackage": 2400000,
+    "highestPackage": 18000000,
+    "placementPercentage": 95,
+    "startingFee": 225000,
+    "highestCourseFee": 400000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Google",
+      "Amazon",
+      "Optiver"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "coep-pune",
+    "slug": "coep-pune",
+    "name": "College of Engineering Pune",
+    "shortName": "COEP",
+    "website": "https://www.coep.org.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/a/a2/College_of_Engineering%2C_Pune_logo.png",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "country": "India",
+    "location": "Pune, Maharashtra",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A+"
+    ],
+    "establishedYear": 1854,
+    "campusArea": 36,
+    "campusAreaUnit": "acres",
+    "description": "One of the oldest engineering colleges in Asia, known for its rich legacy and strong alumni network.",
+    "nirfRank": 73,
+    "stateRank": 3,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 1500,
+    "averagePackage": 1100000,
+    "highestPackage": 5000000,
+    "placementPercentage": 85,
+    "startingFee": 115000,
+    "highestCourseFee": 150000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Bajaj Auto",
+      "TCS",
+      "Infosys",
+      "L&T"
+    ],
+    "examsAccepted": [
+      "MHT CET",
+      "JEE Main"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iisc-bangalore",
+    "slug": "iisc-bangalore",
+    "name": "Indian Institute of Science Bangalore",
+    "shortName": "IISc",
+    "website": "https://iisc.ac.in",
+    "collegeType": "Science",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/e5/Indian_Institute_of_Science_logo.png",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "country": "India",
+    "location": "Bangalore, Karnataka",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC A++",
+      "UGC"
+    ],
+    "establishedYear": 1909,
+    "campusArea": 440,
+    "campusAreaUnit": "acres",
+    "description": "India's premier institute for advanced scientific and technological research.",
+    "nirfRank": 1,
+    "stateRank": 1,
+    "qsRank": 155,
+    "overallRating": 4.9,
+    "reviewCount": 980,
+    "averagePackage": 2870000,
+    "highestPackage": 9000000,
+    "placementPercentage": 98,
+    "startingFee": 50000,
+    "highestCourseFee": 120000,
+    "popularCourses": [
+      "B.Sc",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Intel",
+      "IBM"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "IISER Aptitude"
+    ],
+    "categories": [
+      "Science",
+      "Engineering"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "nit-surathkal",
+    "slug": "nit-surathkal",
+    "name": "National Institute of Technology Karnataka",
+    "shortName": "NITK",
+    "website": "https://www.nitk.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/cc/NITK_Surathkal_Logo.svg",
+    "city": "Mangalore",
+    "state": "Karnataka",
+    "country": "India",
+    "location": "Mangalore, Karnataka",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1960,
+    "campusArea": 295,
+    "campusAreaUnit": "acres",
+    "description": "A top-tier NIT with a private beach, renowned for high academic standards and placements.",
+    "nirfRank": 12,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.5,
+    "reviewCount": 2100,
+    "averagePackage": 1800000,
+    "highestPackage": 5400000,
+    "placementPercentage": 93,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA"
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Oracle",
+      "Cisco",
+      "Goldman Sachs"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iim-ahmedabad",
+    "slug": "iim-ahmedabad",
+    "name": "Indian Institute of Management Ahmedabad",
+    "shortName": "IIM-A",
+    "website": "https://www.iima.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/58/IIM_Ahmedabad_Logo.svg",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "country": "India",
+    "location": "Ahmedabad, Gujarat",
+    "ownership": "Government",
+    "accreditation": [
+      "EQUIS",
+      "AACSB",
+      "AMBA"
+    ],
+    "establishedYear": 1961,
+    "campusArea": 102,
+    "campusAreaUnit": "acres",
+    "description": "The undisputed leader in management education in India, boasting global standards.",
+    "nirfRank": 1,
+    "stateRank": 1,
+    "qsRank": 42,
+    "overallRating": 4.9,
+    "reviewCount": 1840,
+    "averagePackage": 3450000,
+    "highestPackage": 11500000,
+    "placementPercentage": 100,
+    "startingFee": 2500000,
+    "highestCourseFee": 3200000,
+    "popularCourses": [
+      "MBA",
+      "PGPX",
+      "PhD"
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "BCG",
+      "Bain & Co",
+      "Goldman Sachs"
+    ],
+    "examsAccepted": [
+      "CAT",
+      "GMAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "svnit-surat",
+    "slug": "svnit-surat",
+    "name": "Sardar Vallabhbhai National Institute of Technology",
+    "shortName": "SVNIT",
+    "website": "https://www.svnit.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4b/Sardar_Vallabhbhai_National_Institute_of_Technology%2C_Surat_Logo.png",
+    "city": "Surat",
+    "state": "Gujarat",
+    "country": "India",
+    "location": "Surat, Gujarat",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1961,
+    "campusArea": 250,
+    "campusAreaUnit": "acres",
+    "description": "An institute of national importance located in the diamond city of India.",
+    "nirfRank": 65,
+    "stateRank": 3,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 1300,
+    "averagePackage": 1000000,
+    "highestPackage": 4400000,
+    "placementPercentage": 82,
+    "startingFee": 120000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Reliance",
+      "L&T",
+      "JPMorgan",
+      "Samsung"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iit-kanpur",
+    "slug": "iit-kanpur",
+    "name": "Indian Institute of Technology Kanpur",
+    "shortName": "IIT Kanpur",
+    "website": "https://www.iitk.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/a/a3/IIT_Kanpur_Logo.svg",
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "location": "Kanpur, Uttar Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1959,
+    "campusArea": 1055,
+    "campusAreaUnit": "acres",
+    "description": "Known for its rigorous academics and massive campus, IITK is a global hub for engineering and science.",
+    "nirfRank": 4,
+    "stateRank": 1,
+    "qsRank": 278,
+    "overallRating": 4.8,
+    "reviewCount": 3500,
+    "averagePackage": 2200000,
+    "highestPackage": 19000000,
+    "placementPercentage": 94,
+    "startingFee": 220000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Tower Research",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iim-lucknow",
+    "slug": "iim-lucknow",
+    "name": "Indian Institute of Management Lucknow",
+    "shortName": "IIM-L",
+    "website": "https://www.iiml.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/bf/Indian_Institute_of_Management_Lucknow_Logo.svg",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "location": "Lucknow, Uttar Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "AMBA",
+      "AACSB",
+      "EQUIS"
+    ],
+    "establishedYear": 1984,
+    "campusArea": 200,
+    "campusAreaUnit": "acres",
+    "description": "Recognized globally for its management programs and beautifully landscaped campus.",
+    "nirfRank": 6,
+    "stateRank": 2,
+    "qsRank": 150,
+    "overallRating": 4.7,
+    "reviewCount": 1200,
+    "averagePackage": 3000000,
+    "highestPackage": 6500000,
+    "placementPercentage": 100,
+    "startingFee": 1900000,
+    "highestCourseFee": 2100000,
+    "popularCourses": [
+      "MBA",
+      "PGPM"
+    ],
+    "topRecruiters": [
+      "Accenture",
+      "Deloitte",
+      "Amazon",
+      "BCG"
+    ],
+    "examsAccepted": [
+      "CAT",
+      "GMAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iit-kharagpur",
+    "slug": "iit-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur",
+    "shortName": "IIT KGP",
+    "website": "https://www.iitkgp.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/1c/IIT_Kharagpur_Logo.svg",
+    "city": "Kharagpur",
+    "state": "West Bengal",
+    "country": "India",
+    "location": "Kharagpur, West Bengal",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1951,
+    "campusArea": 2100,
+    "campusAreaUnit": "acres",
+    "description": "The oldest IIT with the largest campus in India, fostering multidisciplinary learning.",
+    "nirfRank": 5,
+    "stateRank": 1,
+    "qsRank": 271,
+    "overallRating": 4.7,
+    "reviewCount": 4200,
+    "averagePackage": 2000000,
+    "highestPackage": 24000000,
+    "placementPercentage": 90,
+    "startingFee": 210000,
+    "highestCourseFee": 350000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "Law"
+    ],
+    "topRecruiters": [
+      "Apple",
+      "Google",
+      "Qualcomm",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "CLAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Law",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "jadavpur-university",
+    "slug": "jadavpur-university",
+    "name": "Jadavpur University",
+    "shortName": "JU",
+    "website": "https://jadavpuruniversity.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4a/Jadavpur_University_Logo.svg",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "country": "India",
+    "location": "Kolkata, West Bengal",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC A",
+      "NBA"
+    ],
+    "establishedYear": 1955,
+    "campusArea": 58,
+    "campusAreaUnit": "acres",
+    "description": "Highly respected state university known for an incredible return on investment and strong technical departments.",
+    "nirfRank": 4,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.4,
+    "reviewCount": 1800,
+    "averagePackage": 1000000,
+    "highestPackage": 8500000,
+    "placementPercentage": 85,
+    "startingFee": 10000,
+    "highestCourseFee": 30000,
+    "popularCourses": [
+      "B.Tech",
+      "B.Sc",
+      "BA"
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Texas Instruments",
+      "Samsung",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "WBJEE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science",
+      "Arts"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "bits-pilani",
+    "slug": "bits-pilani",
+    "name": "Birla Institute of Technology and Science",
+    "shortName": "BITS Pilani",
+    "website": "https://www.bits-pilani.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/d/d3/BITS_Pilani_logo.svg",
+    "city": "Pilani",
+    "state": "Rajasthan",
+    "country": "India",
+    "location": "Pilani, Rajasthan",
+    "ownership": "Private",
+    "accreditation": [
+      "NAAC A",
+      "NBA"
+    ],
+    "establishedYear": 1964,
+    "campusArea": 328,
+    "campusAreaUnit": "acres",
+    "description": "One of India's best private engineering colleges, famous for its no-attendance policy and entrepreneurial culture.",
+    "nirfRank": 20,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.6,
+    "reviewCount": 2300,
+    "averagePackage": 3000000,
+    "highestPackage": 6000000,
+    "placementPercentage": 95,
+    "startingFee": 550000,
+    "highestCourseFee": 2500000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Sc",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Google",
+      "Swiggy",
+      "Uber"
+    ],
+    "examsAccepted": [
+      "BITSAT",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Science",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "mnit-jaipur",
+    "slug": "mnit-jaipur",
+    "name": "Malaviya National Institute of Technology",
+    "shortName": "MNIT Jaipur",
+    "website": "https://www.mnit.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/ed/Malaviya_National_Institute_of_Technology%2C_Jaipur_Logo.png",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India",
+    "location": "Jaipur, Rajasthan",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1963,
+    "campusArea": 317,
+    "campusAreaUnit": "acres",
+    "description": "Leading NIT in the western region, known for strong architectural and engineering disciplines.",
+    "nirfRank": 37,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 1100,
+    "averagePackage": 1200000,
+    "highestPackage": 6400000,
+    "placementPercentage": 88,
+    "startingFee": 130000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Tata Motors",
+      "Samsung",
+      "L&T"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iit-hyderabad",
+    "slug": "iit-hyderabad",
+    "name": "Indian Institute of Technology Hyderabad",
+    "shortName": "IITH",
+    "website": "https://www.iith.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/19/IIT_Hyderabad_Insignia.svg",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "location": "Hyderabad, Telangana",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2008,
+    "campusArea": 576,
+    "campusAreaUnit": "acres",
+    "description": "One of the fastest-growing second-generation IITs, celebrated for its unique fractional credit system and fractal academics.",
+    "nirfRank": 8,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.5,
+    "reviewCount": 900,
+    "averagePackage": 2000000,
+    "highestPackage": 6500000,
+    "placementPercentage": 89,
+    "startingFee": 220000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "B.Des"
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Qualcomm",
+      "Microsoft",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "UCEED"
+    ],
+    "categories": [
+      "Engineering",
+      "Design"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "nit-warangal",
+    "slug": "nit-warangal",
+    "name": "National Institute of Technology Warangal",
+    "shortName": "NITW",
+    "website": "https://www.nitw.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/2/2c/National_Institute_of_Technology%2C_Warangal_logo.png",
+    "city": "Warangal",
+    "state": "Telangana",
+    "country": "India",
+    "location": "Warangal, Telangana",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1959,
+    "campusArea": 248,
+    "campusAreaUnit": "acres",
+    "description": "The first in the chain of NITs, renowned for phenomenal engineering placements and rigorous curriculum.",
+    "nirfRank": 21,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.4,
+    "reviewCount": 1600,
+    "averagePackage": 1700000,
+    "highestPackage": 8800000,
+    "placementPercentage": 91,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA"
+    ],
+    "topRecruiters": [
+      "Goldman Sachs",
+      "Microsoft",
+      "Oracle",
+      "SAP"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "NIMCET"
+    ],
+    "categories": [
+      "Engineering",
+      "Computer Applications"
+    ],
+    "featured": false,
+    "topPlacement": true,
+    "topRated": false
+  },
+  {
+    "id": "thapar-institute",
+    "slug": "thapar-institute",
+    "name": "Thapar Institute of Engineering and Technology",
+    "shortName": "TIET",
+    "website": "https://www.thapar.edu",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/e6/Thapar_Institute_of_Engineering_and_Technology_logo.png",
+    "city": "Patiala",
+    "state": "Punjab",
+    "country": "India",
+    "location": "Patiala, Punjab",
+    "ownership": "Deemed",
+    "accreditation": [
+      "NAAC A+",
+      "NBA"
+    ],
+    "establishedYear": 1956,
+    "campusArea": 250,
+    "campusAreaUnit": "acres",
+    "description": "One of India's oldest and most prestigious private deemed-to-be-universities with strong industry tie-ups.",
+    "nirfRank": 20,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 2100,
+    "averagePackage": 1100000,
+    "highestPackage": 5500000,
+    "placementPercentage": 85,
+    "startingFee": 350000,
+    "highestCourseFee": 1600000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "JP Morgan",
+      "IBM",
+      "Infosys"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-jalandhar",
+    "slug": "nit-jalandhar",
+    "name": "Dr. B R Ambedkar National Institute of Technology",
+    "shortName": "NIT Jalandhar",
+    "website": "https://www.nitj.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/cb/Dr._B._R._Ambedkar_National_Institute_of_Technology_Jalandhar_Logo.png",
+    "city": "Jalandhar",
+    "state": "Punjab",
+    "country": "India",
+    "location": "Jalandhar, Punjab",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1987,
+    "campusArea": 154,
+    "campusAreaUnit": "acres",
+    "description": "Known for core engineering streams and robust campus facilities.",
+    "nirfRank": 46,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.0,
+    "reviewCount": 1150,
+    "averagePackage": 1200000,
+    "highestPackage": 12000000,
+    "placementPercentage": 80,
+    "startingFee": 120000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Adobe",
+      "Microsoft",
+      "Tata Motors",
+      "Hero MotoCorp"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-calicut",
+    "slug": "nit-calicut",
+    "name": "National Institute of Technology Calicut",
+    "shortName": "NITC",
+    "website": "https://www.nitc.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b2/National_Institute_of_Technology%2C_Calicut_Logo.svg",
+    "city": "Kozhikode",
+    "state": "Kerala",
+    "country": "India",
+    "location": "Kozhikode, Kerala",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1961,
+    "campusArea": 296,
+    "campusAreaUnit": "acres",
+    "description": "An institute of national importance characterized by high academic rigor and lush green surroundings.",
+    "nirfRank": 23,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.3,
+    "reviewCount": 1450,
+    "averagePackage": 1400000,
+    "highestPackage": 5000000,
+    "placementPercentage": 84,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Oracle",
+      "Bajaj Auto",
+      "Cisco"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iim-kozhikode",
+    "slug": "iim-kozhikode",
+    "name": "Indian Institute of Management Kozhikode",
+    "shortName": "IIM-K",
+    "website": "https://www.iimk.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/6/69/Indian_Institute_of_Management_Kozhikode_Logo.svg",
+    "city": "Kozhikode",
+    "state": "Kerala",
+    "country": "India",
+    "location": "Kozhikode, Kerala",
+    "ownership": "Government",
+    "accreditation": [
+      "AMBA",
+      "EQUIS"
+    ],
+    "establishedYear": 1996,
+    "campusArea": 112,
+    "campusAreaUnit": "acres",
+    "description": "Situated on two hillocks, this IIM is renowned for its diverse cohorts and stellar global placements.",
+    "nirfRank": 3,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.6,
+    "reviewCount": 850,
+    "averagePackage": 2900000,
+    "highestPackage": 6700000,
+    "placementPercentage": 100,
+    "startingFee": 2050000,
+    "highestCourseFee": 2300000,
+    "popularCourses": [
+      "MBA",
+      "PGP"
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "EY",
+      "Amazon",
+      "HUL"
+    ],
+    "examsAccepted": [
+      "CAT",
+      "GMAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iit-tirupati",
+    "slug": "iit-tirupati",
+    "name": "Indian Institute of Technology Tirupati",
+    "shortName": "IIT Tirupati",
+    "website": "https://www.iittp.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/3/36/IIT_Tirupati_Logo.svg",
+    "city": "Tirupati",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "location": "Tirupati, Andhra Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2015,
+    "campusArea": 548,
+    "campusAreaUnit": "acres",
+    "description": "One of the fast-growing third-generation IITs offering state-of-the-art facilities and a growing research culture.",
+    "nirfRank": 59,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 450,
+    "averagePackage": 1650000,
+    "highestPackage": 4000000,
+    "placementPercentage": 85,
+    "startingFee": 210000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Amazon",
+      "MathWorks",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "kl-university",
+    "slug": "kl-university",
+    "name": "Koneru Lakshmaiah Education Foundation",
+    "shortName": "KL University",
+    "website": "https://www.kluniversity.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/9/90/K_L_University_logo.png",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "country": "India",
+    "location": "Vijayawada, Andhra Pradesh",
+    "ownership": "Deemed",
+    "accreditation": [
+      "NAAC A++",
+      "NBA"
+    ],
+    "establishedYear": 1980,
+    "campusArea": 100,
+    "campusAreaUnit": "acres",
+    "description": "A highly-rated deemed university known for strict academics, extensive infrastructure, and strong volume placements.",
+    "nirfRank": 28,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 1800,
+    "averagePackage": 750000,
+    "highestPackage": 2500000,
+    "placementPercentage": 92,
+    "startingFee": 250000,
+    "highestCourseFee": 350000,
+    "popularCourses": [
+      "B.Tech",
+      "BBA",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Cognizant",
+      "Wipro",
+      "Infosys",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "KLEEE",
+      "JEE Main"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "iit-patna",
+    "slug": "iit-patna",
+    "name": "Indian Institute of Technology Patna",
+    "shortName": "IIT Patna",
+    "website": "https://www.iitp.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/52/Indian_Institute_of_Technology_Patna_Logo.svg",
+    "city": "Patna",
+    "state": "Bihar",
+    "country": "India",
+    "location": "Patna, Bihar",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2008,
+    "campusArea": 501,
+    "campusAreaUnit": "acres",
+    "description": "A second-generation IIT that has rapidly scaled its research output and tech placements in Eastern India.",
+    "nirfRank": 41,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.3,
+    "reviewCount": 780,
+    "averagePackage": 2000000,
+    "highestPackage": 8200000,
+    "placementPercentage": 88,
+    "startingFee": 210000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "B.Sc"
+    ],
+    "topRecruiters": [
+      "Google",
+      "Atlassian",
+      "Samsung",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": false,
+    "topPlacement": true,
+    "topRated": false
+  },
+  {
+    "id": "nit-patna",
+    "slug": "nit-patna",
+    "name": "National Institute of Technology Patna",
+    "shortName": "NIT Patna",
+    "website": "https://www.nitp.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/5e/National_Institute_of_Technology%2C_Patna_Logo.png",
+    "city": "Patna",
+    "state": "Bihar",
+    "country": "India",
+    "location": "Patna, Bihar",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1886,
+    "campusArea": 40,
+    "campusAreaUnit": "acres",
+    "description": "One of the oldest engineering institutes in India, located along the banks of the river Ganges.",
+    "nirfRank": 56,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.0,
+    "reviewCount": 1100,
+    "averagePackage": 1050000,
+    "highestPackage": 5200000,
+    "placementPercentage": 82,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "B.Arch"
+    ],
+    "topRecruiters": [
+      "Adobe",
+      "Paytm",
+      "TCS",
+      "L&T"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Architecture"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iit-indore",
+    "slug": "iit-indore",
+    "name": "Indian Institute of Technology Indore",
+    "shortName": "IIT Indore",
+    "website": "https://www.iiti.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c4/Indian_Institute_of_Technology_Indore_Logo.svg",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "country": "India",
+    "location": "Indore, Madhya Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2009,
+    "campusArea": 501,
+    "campusAreaUnit": "acres",
+    "description": "A prominent second-generation IIT that leads in academic citations and cutting-edge engineering research.",
+    "nirfRank": 14,
+    "stateRank": 1,
+    "qsRank": 396,
+    "overallRating": 4.5,
+    "reviewCount": 850,
+    "averagePackage": 2300000,
+    "highestPackage": 6800000,
+    "placementPercentage": 90,
+    "startingFee": 220000,
+    "highestCourseFee": 310000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "ISRO",
+      "DE Shaw",
+      "Goldman Sachs",
+      "Microsoft"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iim-indore",
+    "slug": "iim-indore",
+    "name": "Indian Institute of Management Indore",
+    "shortName": "IIM Indore",
+    "website": "https://www.iimidr.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/0/05/IIM_Indore_Logo.svg",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "country": "India",
+    "location": "Indore, Madhya Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "AMBA",
+      "AACSB",
+      "EQUIS"
+    ],
+    "establishedYear": 1996,
+    "campusArea": 193,
+    "campusAreaUnit": "acres",
+    "description": "The 'Planet-I' campus is renowned for its IPM program and robust industry integration in management education.",
+    "nirfRank": 8,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.6,
+    "reviewCount": 1100,
+    "averagePackage": 2500000,
+    "highestPackage": 5000000,
+    "placementPercentage": 100,
+    "startingFee": 2100000,
+    "highestCourseFee": 2400000,
+    "popularCourses": [
+      "MBA",
+      "IPM"
+    ],
+    "topRecruiters": [
+      "BCG",
+      "McKinsey",
+      "Accenture",
+      "HDFC Bank"
+    ],
+    "examsAccepted": [
+      "CAT",
+      "IPMAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "nit-rourkela",
+    "slug": "nit-rourkela",
+    "name": "National Institute of Technology Rourkela",
+    "shortName": "NIT Rourkela",
+    "website": "https://www.nitrkl.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b5/National_Institute_of_Technology%2C_Rourkela_Logo.svg",
+    "city": "Rourkela",
+    "state": "Odisha",
+    "country": "India",
+    "location": "Rourkela, Odisha",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1961,
+    "campusArea": 1200,
+    "campusAreaUnit": "acres",
+    "description": "Boasting one of the largest engineering campuses in India, NIT Rourkela excels in both core and software engineering.",
+    "nirfRank": 16,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.5,
+    "reviewCount": 1700,
+    "averagePackage": 1300000,
+    "highestPackage": 5000000,
+    "placementPercentage": 88,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Tata Steel",
+      "Amazon",
+      "TCS",
+      "Bajaj Auto"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Science",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "kiit-bhubaneswar",
+    "slug": "kiit-bhubaneswar",
+    "name": "Kalinga Institute of Industrial Technology",
+    "shortName": "KIIT",
+    "website": "https://kiit.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/ef/KIIT_logo.svg",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "country": "India",
+    "location": "Bhubaneswar, Odisha",
+    "ownership": "Private",
+    "accreditation": [
+      "NAAC A++",
+      "NBA",
+      "IET"
+    ],
+    "establishedYear": 1992,
+    "campusArea": 400,
+    "campusAreaUnit": "acres",
+    "description": "A leading private university in Eastern India with world-class facilities and diverse academic programs.",
+    "nirfRank": 16,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 3500,
+    "averagePackage": 850000,
+    "highestPackage": 6300000,
+    "placementPercentage": 90,
+    "startingFee": 350000,
+    "highestCourseFee": 450000,
+    "popularCourses": [
+      "B.Tech",
+      "MBA",
+      "Law",
+      "BBA"
+    ],
+    "topRecruiters": [
+      "Capgemini",
+      "Cognizant",
+      "HighRadius",
+      "Wipro"
+    ],
+    "examsAccepted": [
+      "KIITEE",
+      "JEE Main"
+    ],
+    "categories": [
+      "Engineering",
+      "Management",
+      "Law"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "iit-guwahati",
+    "slug": "iit-guwahati",
+    "name": "Indian Institute of Technology Guwahati",
+    "shortName": "IIT Guwahati",
+    "website": "https://www.iitg.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/12/IIT_Guwahati_Logo.svg",
+    "city": "Guwahati",
+    "state": "Assam",
+    "country": "India",
+    "location": "Guwahati, Assam",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1994,
+    "campusArea": 700,
+    "campusAreaUnit": "acres",
+    "description": "Considered the most beautiful IIT campus, situated on the banks of the Brahmaputra with outstanding tech placements.",
+    "nirfRank": 7,
+    "stateRank": 1,
+    "qsRank": 364,
+    "overallRating": 4.7,
+    "reviewCount": 1600,
+    "averagePackage": 2600000,
+    "highestPackage": 120000000,
+    "placementPercentage": 92,
+    "startingFee": 220000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "B.Des",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Google",
+      "Microsoft",
+      "Uber",
+      "Tower Research"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "UCEED"
+    ],
+    "categories": [
+      "Engineering",
+      "Design",
+      "Science"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "nit-silchar",
+    "slug": "nit-silchar",
+    "name": "National Institute of Technology Silchar",
+    "shortName": "NIT Silchar",
+    "website": "https://www.nits.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/ca/National_Institute_of_Technology_Silchar_Logo.svg",
+    "city": "Silchar",
+    "state": "Assam",
+    "country": "India",
+    "location": "Silchar, Assam",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1967,
+    "campusArea": 625,
+    "campusAreaUnit": "acres",
+    "description": "An institute of national importance characterized by large water bodies on campus and robust software placements.",
+    "nirfRank": 40,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 980,
+    "averagePackage": 1350000,
+    "highestPackage": 4400000,
+    "placementPercentage": 86,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Oracle",
+      "C-DAC",
+      "Samsung"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-kurukshetra",
+    "slug": "nit-kurukshetra",
+    "name": "National Institute of Technology Kurukshetra",
+    "shortName": "NIT Kurukshetra",
+    "website": "https://nitkkr.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/6/69/NIT_Kurukshetra_Logo.svg",
+    "city": "Kurukshetra",
+    "state": "Haryana",
+    "country": "India",
+    "location": "Kurukshetra, Haryana",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1963,
+    "campusArea": 300,
+    "campusAreaUnit": "acres",
+    "description": "One of the premier NITs in Northern India, recognized for strong core engineering streams and excellent placement metrics.",
+    "nirfRank": 58,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 1350,
+    "averagePackage": 1400000,
+    "highestPackage": 5000000,
+    "placementPercentage": 87,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Honda",
+      "Maruti Suzuki",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "NIMCET"
+    ],
+    "categories": [
+      "Engineering",
+      "Computer Applications"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "ashoka-university",
+    "slug": "ashoka-university",
+    "name": "Ashoka University",
+    "shortName": "Ashoka",
+    "website": "https://www.ashoka.edu.in",
+    "collegeType": "Arts",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/a/ad/Ashoka_University_Logo.svg",
+    "city": "Sonipat",
+    "state": "Haryana",
+    "country": "India",
+    "location": "Sonipat, Haryana",
+    "ownership": "Private",
+    "accreditation": [
+      "UGC",
+      "NAAC A"
+    ],
+    "establishedYear": 2014,
+    "campusArea": 25,
+    "campusAreaUnit": "acres",
+    "description": "India's premier liberal arts and sciences university, distinguished by its elite faculty and interdisciplinary curriculum.",
+    "nirfRank": 88,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.5,
+    "reviewCount": 420,
+    "averagePackage": 1050000,
+    "highestPackage": 3500000,
+    "placementPercentage": 90,
+    "startingFee": 900000,
+    "highestCourseFee": 1100000,
+    "popularCourses": [
+      "BA",
+      "B.Sc",
+      "MA"
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "Bain",
+      "Dalberg",
+      "InfoEdge"
+    ],
+    "examsAccepted": [
+      "AAT",
+      "SAT"
+    ],
+    "categories": [
+      "Arts",
+      "Science",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "nit-raipur",
+    "slug": "nit-raipur",
+    "name": "National Institute of Technology Raipur",
+    "shortName": "NIT Raipur",
+    "website": "https://www.nitrr.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/3/31/National_Institute_of_Technology%2C_Raipur_Logo.svg",
+    "city": "Raipur",
+    "state": "Chhattisgarh",
+    "country": "India",
+    "location": "Raipur, Chhattisgarh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 1956,
+    "campusArea": 100,
+    "campusAreaUnit": "acres",
+    "description": "A prominent engineering hub in central India famous for mining, metallurgical, and software engineering placements.",
+    "nirfRank": 70,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.0,
+    "reviewCount": 1150,
+    "averagePackage": 1000000,
+    "highestPackage": 5500000,
+    "placementPercentage": 82,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "B.Arch",
+      "MCA"
+    ],
+    "topRecruiters": [
+      "Vedanta",
+      "Tata Steel",
+      "Oracle",
+      "Accolite"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "NIMCET"
+    ],
+    "categories": [
+      "Engineering",
+      "Architecture"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iim-raipur",
+    "slug": "iim-raipur",
+    "name": "Indian Institute of Management Raipur",
+    "shortName": "IIM Raipur",
+    "website": "https://iimraipur.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/52/IIM_Raipur_Logo.svg",
+    "city": "Raipur",
+    "state": "Chhattisgarh",
+    "country": "India",
+    "location": "Raipur, Chhattisgarh",
+    "ownership": "Government",
+    "accreditation": [
+      "AMBA",
+      "AACSB"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 200,
+    "campusAreaUnit": "acres",
+    "description": "Among the fastest-rising newer IIMs with a state-of-the-art campus in Naya Raipur and excellent ROI.",
+    "nirfRank": 11,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.5,
+    "reviewCount": 400,
+    "averagePackage": 2100000,
+    "highestPackage": 4300000,
+    "placementPercentage": 100,
+    "startingFee": 1800000,
+    "highestCourseFee": 2000000,
+    "popularCourses": [
+      "MBA",
+      "PhD"
+    ],
+    "topRecruiters": [
+      "ICICI Bank",
+      "Deloitte",
+      "Cognizant",
+      "Capgemini"
+    ],
+    "examsAccepted": [
+      "CAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iit-ism-dhanbad",
+    "slug": "iit-ism-dhanbad",
+    "name": "Indian Institute of Technology (ISM) Dhanbad",
+    "shortName": "IIT ISM",
+    "website": "https://www.iitism.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/cb/IIT_ISM_Dhanbad_Logo.svg",
+    "city": "Dhanbad",
+    "state": "Jharkhand",
+    "country": "India",
+    "location": "Dhanbad, Jharkhand",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1926,
+    "campusArea": 393,
+    "campusAreaUnit": "acres",
+    "description": "Formerly the Indian School of Mines, this prestigious IIT is a global powerhouse for earth sciences and engineering.",
+    "nirfRank": 17,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.4,
+    "reviewCount": 1650,
+    "averagePackage": 1700000,
+    "highestPackage": 5600000,
+    "placementPercentage": 89,
+    "startingFee": 210000,
+    "highestCourseFee": 300000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "ONGC",
+      "Google",
+      "Goldman Sachs",
+      "Tata Steel"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Science",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "xlri-jamshedpur",
+    "slug": "xlri-jamshedpur",
+    "name": "Xavier School of Management Jamshedpur",
+    "shortName": "XLRI",
+    "website": "https://www.xlri.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/8/87/XLRI_logo.svg",
+    "city": "Jamshedpur",
+    "state": "Jharkhand",
+    "country": "India",
+    "location": "Jamshedpur, Jharkhand",
+    "ownership": "Private",
+    "accreditation": [
+      "AACSB",
+      "AMBA",
+      "AICTE"
+    ],
+    "establishedYear": 1949,
+    "campusArea": 50,
+    "campusAreaUnit": "acres",
+    "description": "India's oldest business school and arguably the best institution for Human Resources in the Asia-Pacific.",
+    "nirfRank": 9,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.8,
+    "reviewCount": 900,
+    "averagePackage": 3200000,
+    "highestPackage": 7800000,
+    "placementPercentage": 100,
+    "startingFee": 2300000,
+    "highestCourseFee": 2800000,
+    "popularCourses": [
+      "PGDM (HRM)",
+      "PGDM (BM)",
+      "Executive PGDM"
+    ],
+    "topRecruiters": [
+      "HUL",
+      "P&G",
+      "Boston Consulting Group",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "XAT",
+      "GMAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "iit-roorkee",
+    "slug": "iit-roorkee",
+    "name": "Indian Institute of Technology Roorkee",
+    "shortName": "IIT Roorkee",
+    "website": "https://www.iitr.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/6/6f/Indian_Institute_of_Technology_Roorkee_logo.svg",
+    "city": "Roorkee",
+    "state": "Uttarakhand",
+    "country": "India",
+    "location": "Roorkee, Uttarakhand",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1847,
+    "campusArea": 365,
+    "campusAreaUnit": "acres",
+    "description": "Asia's oldest technical institution, IIT Roorkee provides a historic campus combined with cutting-edge engineering output.",
+    "nirfRank": 5,
+    "stateRank": 1,
+    "qsRank": 369,
+    "overallRating": 4.8,
+    "reviewCount": 2400,
+    "averagePackage": 2700000,
+    "highestPackage": 13000000,
+    "placementPercentage": 93,
+    "startingFee": 220000,
+    "highestCourseFee": 320000,
+    "popularCourses": [
+      "B.Tech",
+      "B.Arch",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Google",
+      "Uber",
+      "Reliance"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Architecture",
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "upes-dehradun",
+    "slug": "upes-dehradun",
+    "name": "University of Petroleum and Energy Studies",
+    "shortName": "UPES",
+    "website": "https://www.upes.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/UPES_Logo.png",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "country": "India",
+    "location": "Dehradun, Uttarakhand",
+    "ownership": "Private",
+    "accreditation": [
+      "NAAC A",
+      "NBA"
+    ],
+    "establishedYear": 2003,
+    "campusArea": 44,
+    "campusAreaUnit": "acres",
+    "description": "A multi-disciplinary private university set in the scenic foothills of the Himalayas, noted for domain-specific placements.",
+    "nirfRank": 52,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.0,
+    "reviewCount": 1800,
+    "averagePackage": 850000,
+    "highestPackage": 3300000,
+    "placementPercentage": 94,
+    "startingFee": 350000,
+    "highestCourseFee": 500000,
+    "popularCourses": [
+      "B.Tech",
+      "MBA",
+      "Law",
+      "B.Des"
+    ],
+    "topRecruiters": [
+      "Schlumberger",
+      "ONGC",
+      "Deloitte",
+      "KPMG"
+    ],
+    "examsAccepted": [
+      "UPESEAT",
+      "JEE Main",
+      "CLAT",
+      "CAT"
+    ],
+    "categories": [
+      "Engineering",
+      "Management",
+      "Law",
+      "Design"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iit-mandi",
+    "slug": "iit-mandi",
+    "name": "Indian Institute of Technology Mandi",
+    "shortName": "IIT Mandi",
+    "website": "https://www.iitmandi.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/e5/IIT_Mandi_Logo.svg",
+    "city": "Mandi",
+    "state": "Himachal Pradesh",
+    "country": "India",
+    "location": "Mandi, Himachal Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2009,
+    "campusArea": 538,
+    "campusAreaUnit": "acres",
+    "description": "Located in the serene Himalayan foothills, IIT Mandi offers a highly innovative curriculum focused on applied sciences.",
+    "nirfRank": 33,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.4,
+    "reviewCount": 650,
+    "averagePackage": 2500000,
+    "highestPackage": 6000000,
+    "placementPercentage": 86,
+    "startingFee": 220000,
+    "highestCourseFee": 310000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "C-DOT",
+      "Samsung",
+      "L&T"
+    ],
+    "examsAccepted": [
+      "JEE Advanced",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "nit-hamirpur",
+    "slug": "nit-hamirpur",
+    "name": "National Institute of Technology Hamirpur",
+    "shortName": "NIT Hamirpur",
+    "website": "https://nith.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/8/8c/National_Institute_of_Technology%2C_Hamirpur_Logo.svg",
+    "city": "Hamirpur",
+    "state": "Himachal Pradesh",
+    "country": "India",
+    "location": "Hamirpur, Himachal Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1986,
+    "campusArea": 320,
+    "campusAreaUnit": "acres",
+    "description": "Often cited as one of the most picturesque NIT campuses, it has steady placements across IT and core sectors.",
+    "nirfRank": 128,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 1100,
+    "averagePackage": 1250000,
+    "highestPackage": 5200000,
+    "placementPercentage": 80,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "B.Arch",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Capgemini",
+      "Infosys",
+      "Paytm",
+      "Oracle"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Architecture"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-goa",
+    "slug": "nit-goa",
+    "name": "National Institute of Technology Goa",
+    "shortName": "NIT Goa",
+    "website": "https://www.nitgoa.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/2/2c/National_Institute_of_Technology%2C_Goa_Logo.png",
+    "city": "Ponda",
+    "state": "Goa",
+    "country": "India",
+    "location": "Ponda, Goa",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 300,
+    "campusAreaUnit": "acres",
+    "description": "An institute of national importance located in the vibrant state of Goa, known for strong computer science and electronics programs.",
+    "nirfRank": 90,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 420,
+    "averagePackage": 1100000,
+    "highestPackage": 4400000,
+    "placementPercentage": 88,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "PhD"
+    ],
+    "topRecruiters": [
+      "Samsung",
+      "Intel",
+      "Amazon",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "gim-goa",
+    "slug": "gim-goa",
+    "name": "Goa Institute of Management",
+    "shortName": "GIM",
+    "website": "https://www.gim.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/8/87/Goa_Institute_of_Management_logo.png",
+    "city": "Sanquelim",
+    "state": "Goa",
+    "country": "India",
+    "location": "Sanquelim, Goa",
+    "ownership": "Private",
+    "accreditation": [
+      "AACSB",
+      "AMBA",
+      "NBA"
+    ],
+    "establishedYear": 1993,
+    "campusArea": 50,
+    "campusAreaUnit": "acres",
+    "description": "One of the premier private B-schools in India, renowned for its scenic campus and rigorous PGDM programs.",
+    "nirfRank": 33,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.4,
+    "reviewCount": 950,
+    "averagePackage": 1480000,
+    "highestPackage": 5500000,
+    "placementPercentage": 100,
+    "startingFee": 1800000,
+    "highestCourseFee": 2200000,
+    "popularCourses": [
+      "PGDM",
+      "PGDM (Healthcare)",
+      "PGDM (Big Data Analytics)"
+    ],
+    "topRecruiters": [
+      "Deloitte",
+      "Accenture",
+      "Capgemini",
+      "ICICI Bank"
+    ],
+    "examsAccepted": [
+      "CAT",
+      "XAT",
+      "GMAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "nit-arunachal-pradesh",
+    "slug": "nit-arunachal-pradesh",
+    "name": "National Institute of Technology Arunachal Pradesh",
+    "shortName": "NIT AP",
+    "website": "https://www.nitap.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/9/9f/National_Institute_of_Technology_Arunachal_Pradesh_Logo.png",
+    "city": "Yupia",
+    "state": "Arunachal Pradesh",
+    "country": "India",
+    "location": "Yupia, Arunachal Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 285,
+    "campusAreaUnit": "acres",
+    "description": "A rising technical institution in the northeastern hills, rapidly expanding its research output and infrastructure.",
+    "nirfRank": 150,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 3.9,
+    "reviewCount": 210,
+    "averagePackage": 850000,
+    "highestPackage": 2400000,
+    "placementPercentage": 75,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Cognizant",
+      "TCS",
+      "Tech Mahindra",
+      "Wipro"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "rgu-arunachal",
+    "slug": "rgu-arunachal",
+    "name": "Rajiv Gandhi University",
+    "shortName": "RGU",
+    "website": "https://rgu.ac.in",
+    "collegeType": "Arts",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/1a/Rajiv_Gandhi_University_logo.png",
+    "city": "Doimukh",
+    "state": "Arunachal Pradesh",
+    "country": "India",
+    "location": "Doimukh, Arunachal Pradesh",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC A"
+    ],
+    "establishedYear": 1984,
+    "campusArea": 302,
+    "campusAreaUnit": "acres",
+    "description": "The premier central university in Arunachal Pradesh offering diverse programs in arts, sciences, and commerce.",
+    "nirfRank": 150,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 3.8,
+    "reviewCount": 180,
+    "averagePackage": 450000,
+    "highestPackage": 1200000,
+    "placementPercentage": 60,
+    "startingFee": 15000,
+    "highestCourseFee": 40000,
+    "popularCourses": [
+      "BA",
+      "B.Sc",
+      "MA",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "HDFC Bank",
+      "SBI",
+      "Local Enterprises"
+    ],
+    "examsAccepted": [
+      "CUET"
+    ],
+    "categories": [
+      "Arts",
+      "Science",
+      "Commerce"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-manipur",
+    "slug": "nit-manipur",
+    "name": "National Institute of Technology Manipur",
+    "shortName": "NIT Manipur",
+    "website": "https://www.nitmanipur.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/ca/National_Institute_of_Technology%2C_Manipur_Logo.png",
+    "city": "Imphal",
+    "state": "Manipur",
+    "country": "India",
+    "location": "Imphal, Manipur",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 341,
+    "campusAreaUnit": "acres",
+    "description": "A growing institute of national importance providing top-tier technical education in the Imphal valley.",
+    "nirfRank": 95,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 3.9,
+    "reviewCount": 260,
+    "averagePackage": 890000,
+    "highestPackage": 4700000,
+    "placementPercentage": 78,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Microsoft",
+      "Amazon",
+      "Wipro",
+      "Capgemini"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "manipur-university",
+    "slug": "manipur-university",
+    "name": "Manipur University",
+    "shortName": "MU",
+    "website": "https://www.manipuruniv.ac.in",
+    "collegeType": "Science",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4b/Manipur_University_logo.png",
+    "city": "Imphal",
+    "state": "Manipur",
+    "country": "India",
+    "location": "Imphal, Manipur",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC A"
+    ],
+    "establishedYear": 1980,
+    "campusArea": 287,
+    "campusAreaUnit": "acres",
+    "description": "A central university serving as the intellectual hub for the state with extensive postgraduate and research programs.",
+    "nirfRank": 150,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.0,
+    "reviewCount": 310,
+    "averagePackage": 500000,
+    "highestPackage": 1500000,
+    "placementPercentage": 65,
+    "startingFee": 18000,
+    "highestCourseFee": 50000,
+    "popularCourses": [
+      "BA",
+      "MA",
+      "M.Sc",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "TCS",
+      "HDFC Bank",
+      "Infosys"
+    ],
+    "examsAccepted": [
+      "CUET",
+      "MAT"
+    ],
+    "categories": [
+      "Science",
+      "Arts",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "iim-shillong",
+    "slug": "iim-shillong",
+    "name": "Indian Institute of Management Shillong",
+    "shortName": "IIM Shillong",
+    "website": "https://www.iimshillong.ac.in",
+    "collegeType": "Management",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/f/f6/Indian_Institute_of_Management_Shillong_Logo.svg",
+    "city": "Shillong",
+    "state": "Meghalaya",
+    "country": "India",
+    "location": "Shillong, Meghalaya",
+    "ownership": "Government",
+    "accreditation": [
+      "AMBA"
+    ],
+    "establishedYear": 2007,
+    "campusArea": 120,
+    "campusAreaUnit": "acres",
+    "description": "Known as the 'Campus in the Clouds', IIM Shillong is celebrated for its focus on sustainability and robust corporate placements.",
+    "nirfRank": 26,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.5,
+    "reviewCount": 420,
+    "averagePackage": 2600000,
+    "highestPackage": 7100000,
+    "placementPercentage": 100,
+    "startingFee": 1500000,
+    "highestCourseFee": 2000000,
+    "popularCourses": [
+      "PGP",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "McKinsey",
+      "Bain & Co",
+      "Goldman Sachs",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "CAT"
+    ],
+    "categories": [
+      "Management"
+    ],
+    "featured": true,
+    "topPlacement": true,
+    "topRated": true
+  },
+  {
+    "id": "nit-meghalaya",
+    "slug": "nit-meghalaya",
+    "name": "National Institute of Technology Meghalaya",
+    "shortName": "NIT Meghalaya",
+    "website": "https://www.nitm.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c2/National_Institute_of_Technology_Meghalaya_Logo.png",
+    "city": "Shillong",
+    "state": "Meghalaya",
+    "country": "India",
+    "location": "Shillong, Meghalaya",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 300,
+    "campusAreaUnit": "acres",
+    "description": "Among the top-performing newer NITs, situated in the scenic hills with excellent per-capita academic output.",
+    "nirfRank": 72,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 290,
+    "averagePackage": 1050000,
+    "highestPackage": 5200000,
+    "placementPercentage": 82,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "M.Sc"
+    ],
+    "topRecruiters": [
+      "Cognizant",
+      "Infosys",
+      "L&T",
+      "Amazon"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering",
+      "Science"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-mizoram",
+    "slug": "nit-mizoram",
+    "name": "National Institute of Technology Mizoram",
+    "shortName": "NIT Mizoram",
+    "website": "https://www.nitmz.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/f/fd/National_Institute_of_Technology%2C_Mizoram_Logo.png",
+    "city": "Aizawl",
+    "state": "Mizoram",
+    "country": "India",
+    "location": "Aizawl, Mizoram",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 190,
+    "campusAreaUnit": "acres",
+    "description": "A premier technical institution in the northeast focused on bringing quality engineering education to the region.",
+    "nirfRank": 150,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 3.7,
+    "reviewCount": 160,
+    "averagePackage": 750000,
+    "highestPackage": 3200000,
+    "placementPercentage": 70,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Wipro",
+      "Cognizant",
+      "Capgemini"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "mizoram-university",
+    "slug": "mizoram-university",
+    "name": "Mizoram University",
+    "shortName": "MZU",
+    "website": "https://mzu.edu.in",
+    "collegeType": "Science",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b3/Mizoram_University_logo.png",
+    "city": "Aizawl",
+    "state": "Mizoram",
+    "country": "India",
+    "location": "Aizawl, Mizoram",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC A"
+    ],
+    "establishedYear": 2001,
+    "campusArea": 978,
+    "campusAreaUnit": "acres",
+    "description": "A prominent central university recognized for its massive eco-friendly campus and comprehensive science departments.",
+    "nirfRank": 76,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 240,
+    "averagePackage": 450000,
+    "highestPackage": 1400000,
+    "placementPercentage": 68,
+    "startingFee": 15000,
+    "highestCourseFee": 60000,
+    "popularCourses": [
+      "B.Tech",
+      "MBA",
+      "M.Sc",
+      "MA"
+    ],
+    "topRecruiters": [
+      "HDFC Bank",
+      "TCS",
+      "Infosys"
+    ],
+    "examsAccepted": [
+      "CUET",
+      "JEE Main",
+      "MAT"
+    ],
+    "categories": [
+      "Science",
+      "Management",
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-nagaland",
+    "slug": "nit-nagaland",
+    "name": "National Institute of Technology Nagaland",
+    "shortName": "NIT Nagaland",
+    "website": "https://nitnagaland.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/3/30/National_Institute_of_Technology%2C_Nagaland_Logo.png",
+    "city": "Chumukedima",
+    "state": "Nagaland",
+    "country": "India",
+    "location": "Chumukedima, Nagaland",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 300,
+    "campusAreaUnit": "acres",
+    "description": "Fostering engineering talent in Nagaland with steady infrastructure development and dedicated faculties.",
+    "nirfRank": 150,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 3.8,
+    "reviewCount": 140,
+    "averagePackage": 800000,
+    "highestPackage": 4500000,
+    "placementPercentage": 72,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "NTPC"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nagaland-university",
+    "slug": "nagaland-university",
+    "name": "Nagaland University",
+    "shortName": "NU",
+    "website": "https://nagalanduniversity.ac.in",
+    "collegeType": "Arts",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/8/89/Nagaland_University_Logo.png",
+    "city": "Lumami",
+    "state": "Nagaland",
+    "country": "India",
+    "location": "Lumami, Nagaland",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC B"
+    ],
+    "establishedYear": 1994,
+    "campusArea": 254,
+    "campusAreaUnit": "acres",
+    "description": "A central university providing a wide array of programs in arts, sciences, and agricultural studies.",
+    "nirfRank": 150,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 3.9,
+    "reviewCount": 190,
+    "averagePackage": 400000,
+    "highestPackage": 1000000,
+    "placementPercentage": 55,
+    "startingFee": 12000,
+    "highestCourseFee": 40000,
+    "popularCourses": [
+      "B.Sc",
+      "BA",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "State Government",
+      "SBI",
+      "Axis Bank"
+    ],
+    "examsAccepted": [
+      "CUET"
+    ],
+    "categories": [
+      "Arts",
+      "Science",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "nit-sikkim",
+    "slug": "nit-sikkim",
+    "name": "National Institute of Technology Sikkim",
+    "shortName": "NIT Sikkim",
+    "website": "https://nitsikkim.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/a/a2/National_Institute_of_Technology_Sikkim_Logo.svg",
+    "city": "Ravangla",
+    "state": "Sikkim",
+    "country": "India",
+    "location": "Ravangla, Sikkim",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA"
+    ],
+    "establishedYear": 2010,
+    "campusArea": 100,
+    "campusAreaUnit": "acres",
+    "description": "Operating from a temporary campus in scenic Ravangla, NIT Sikkim excels in software placements despite its remote location.",
+    "nirfRank": 150,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 3.8,
+    "reviewCount": 210,
+    "averagePackage": 850000,
+    "highestPackage": 3400000,
+    "placementPercentage": 81,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "topRecruiters": [
+      "Intel",
+      "TCS",
+      "Infosys",
+      "L&T"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE"
+    ],
+    "categories": [
+      "Engineering"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "smit-sikkim",
+    "slug": "smit-sikkim",
+    "name": "Sikkim Manipal Institute of Technology",
+    "shortName": "SMIT",
+    "website": "https://smu.edu.in/smit.html",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/43/Sikkim_Manipal_University_logo.png",
+    "city": "Majitar",
+    "state": "Sikkim",
+    "country": "India",
+    "location": "Majitar, Sikkim",
+    "ownership": "Private",
+    "accreditation": [
+      "NAAC A+",
+      "NBA"
+    ],
+    "establishedYear": 1997,
+    "campusArea": 35,
+    "campusAreaUnit": "acres",
+    "description": "A constituent college of Sikkim Manipal University, SMIT is recognized for its top-notch labs and high employability rates.",
+    "nirfRank": 101,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 4.2,
+    "reviewCount": 450,
+    "averagePackage": 650000,
+    "highestPackage": 3600000,
+    "placementPercentage": 92,
+    "startingFee": 270000,
+    "highestCourseFee": 320000,
+    "popularCourses": [
+      "B.Tech",
+      "BCA",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Dell",
+      "Microsoft",
+      "Bosch",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "SMIT Online Test",
+      "JEE Main"
+    ],
+    "categories": [
+      "Engineering",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": true
+  },
+  {
+    "id": "nit-agartala",
+    "slug": "nit-agartala",
+    "name": "National Institute of Technology Agartala",
+    "shortName": "NITA",
+    "website": "https://www.nita.ac.in",
+    "collegeType": "Engineering",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/f/ff/National_Institute_of_Technology%2C_Agartala_Logo.png",
+    "city": "Agartala",
+    "state": "Tripura",
+    "country": "India",
+    "location": "Agartala, Tripura",
+    "ownership": "Government",
+    "accreditation": [
+      "NBA",
+      "NAAC A"
+    ],
+    "establishedYear": 1965,
+    "campusArea": 365,
+    "campusAreaUnit": "acres",
+    "description": "Formerly Tripura Engineering College, NIT Agartala boasts a massive campus and strong placement statistics in core and IT sectors.",
+    "nirfRank": 91,
+    "stateRank": 1,
+    "qsRank": null,
+    "overallRating": 4.1,
+    "reviewCount": 850,
+    "averagePackage": 1050000,
+    "highestPackage": 5200000,
+    "placementPercentage": 86,
+    "startingFee": 125000,
+    "highestCourseFee": 200000,
+    "popularCourses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA"
+    ],
+    "topRecruiters": [
+      "Amazon",
+      "Oracle",
+      "Samsung",
+      "TCS"
+    ],
+    "examsAccepted": [
+      "JEE Main",
+      "GATE",
+      "NIMCET"
+    ],
+    "categories": [
+      "Engineering",
+      "Computer Applications"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  },
+  {
+    "id": "tripura-university",
+    "slug": "tripura-university",
+    "name": "Tripura University",
+    "shortName": "TU",
+    "website": "https://tripurauniv.ac.in",
+    "collegeType": "Science",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/6/6c/Tripura_University_logo.png",
+    "city": "Suryamaninagar",
+    "state": "Tripura",
+    "country": "India",
+    "location": "Suryamaninagar, Tripura",
+    "ownership": "Government",
+    "accreditation": [
+      "NAAC B+"
+    ],
+    "establishedYear": 1987,
+    "campusArea": 75,
+    "campusAreaUnit": "acres",
+    "description": "The main public central university of Tripura providing diverse post-graduate programs and doctoral research.",
+    "nirfRank": 150,
+    "stateRank": 2,
+    "qsRank": null,
+    "overallRating": 3.9,
+    "reviewCount": 270,
+    "averagePackage": 350000,
+    "highestPackage": 800000,
+    "placementPercentage": 50,
+    "startingFee": 10000,
+    "highestCourseFee": 30000,
+    "popularCourses": [
+      "MA",
+      "M.Sc",
+      "MBA"
+    ],
+    "topRecruiters": [
+      "Bandhan Bank",
+      "HDFC Bank",
+      "Pradan"
+    ],
+    "examsAccepted": [
+      "CUET",
+      "MAT"
+    ],
+    "categories": [
+      "Arts",
+      "Science",
+      "Management"
+    ],
+    "featured": false,
+    "topPlacement": false,
+    "topRated": false
+  }
+]
+
