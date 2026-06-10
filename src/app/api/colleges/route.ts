@@ -1,70 +1,122 @@
-import { NextRequest, NextResponse } from 'next/server'
-import colleges from '@/data/colleges.json'
+import { NextRequest, NextResponse } from "next/server";
+import colleges from "@/data/colleges.json";
+import { College } from "@/types";
 
 export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url)
+  const { searchParams } = new URL(req.url);
 
-  const search      = searchParams.get('search')?.toLowerCase()
-  const state       = searchParams.get('state')
-  const city        = searchParams.get('city')
-  const ownership   = searchParams.get('ownership')       // 'Government' | 'Private' | 'Deemed'
-  const collegeType = searchParams.get('collegeType')     // 'Engineering' | 'Management' | 'Science' | 'Arts'
-  const minRating   = searchParams.get('minRating')
-  const maxFee      = searchParams.get('maxFee')          // filters on startingFee
-  const minPlacement= searchParams.get('minPlacement')    // placementPercentage
-  const maxNirf     = searchParams.get('maxNirf')         // nirfRank <= this value
-  const featured    = searchParams.get('featured')        // 'true'
-  const topPlacement= searchParams.get('topPlacement')    // 'true'
-  const topRated    = searchParams.get('topRated')        // 'true'
-  const sortBy      = searchParams.get('sortBy')          // 'nirfRank' | 'overallRating' | 'averagePackage' | 'startingFee'
-  const order       = searchParams.get('order') || 'asc' // 'asc' | 'desc'
-  const page        = parseInt(searchParams.get('page')  || '1')
-  const limit       = parseInt(searchParams.get('limit') || '12')
+  const search = searchParams.get("search")?.toLowerCase() || "";
+  const states = searchParams.getAll("state");
+  const cities = searchParams.getAll("city");
+  const feeRanges = searchParams.getAll("fee");
+  const ratings = searchParams.getAll("rating");
+  const avgPackages = searchParams.getAll("avgPackage");
+  const highestPackages = searchParams.getAll("highestPackage");
+  const placementPcts = searchParams.getAll("placementPct");
+  const nirfRanges = searchParams.getAll("nirf");
+  const courses = searchParams.getAll("course");
+  const ownership = searchParams.getAll("ownership");
+  const sortBy = searchParams.get("sortBy") || "nirfRank";
 
-  let result = [...colleges]
+  let result = colleges as College[];
 
-  // --- Filters ---
+  // Search
   if (search) {
-    result = result.filter(c =>
-      c.name.toLowerCase().includes(search) ||
-      c.shortName.toLowerCase().includes(search) ||
-      c.city.toLowerCase().includes(search) ||
-      c.state.toLowerCase().includes(search)
-    )
-  }
-  if (state)        result = result.filter(c => c.state === state)
-  if (city)         result = result.filter(c => c.city === city)
-  if (ownership)    result = result.filter(c => c.ownership === ownership)
-  if (collegeType)  result = result.filter(c => c.collegeType === collegeType)
-  if (minRating)    result = result.filter(c => c.overallRating >= parseFloat(minRating))
-  if (maxFee)       result = result.filter(c => c.startingFee <= parseInt(maxFee))
-  if (minPlacement) result = result.filter(c => c.placementPercentage >= parseInt(minPlacement))
-  if (maxNirf)      result = result.filter(c => c.nirfRank <= parseInt(maxNirf))
-  if (featured === 'true')     result = result.filter(c => c.featured)
-  if (topPlacement === 'true') result = result.filter(c => c.topPlacement)
-  if (topRated === 'true')     result = result.filter(c => c.topRated)
-
-  // --- Sorting ---
-  if (sortBy) {
-    result.sort((a, b) => {
-      const aVal = (a as any)[sortBy] ?? 0
-      const bVal = (b as any)[sortBy] ?? 0
-      return order === 'desc' ? bVal - aVal : aVal - bVal
-    })
+    result = result.filter(
+      (c) =>
+        c.name.toLowerCase().includes(search) ||
+        c.shortName.toLowerCase().includes(search) ||
+        c.location.toLowerCase().includes(search) ||
+        c.popularCourses.some((p) => p.toLowerCase().includes(search))
+    );
   }
 
-  // --- Pagination ---
-  const total      = result.length
-  const totalPages = Math.ceil(total / limit)
-  const paginated  = result.slice((page - 1) * limit, page * limit)
+  // State filter
+  if (states.length) result = result.filter((c) => states.includes(c.state));
 
-  // --- Filter options (for sidebar dropdowns) ---
-  const allStates = [...new Set(colleges.map(c => c.state))].sort()
-  const allCities = [...new Set(colleges.map(c => c.city))].sort()
+  // City filter
+  if (cities.length) result = result.filter((c) => cities.includes(c.city));
 
-  return NextResponse.json({
-    data: paginated,
-    meta: { total, page, limit, totalPages },
-    filters: { states: allStates, cities: allCities }
-  })
+  // Ownership
+  if (ownership.length) result = result.filter((c) => ownership.includes(c.ownership));
+
+  // Courses
+  if (courses.length)
+    result = result.filter((c) =>
+      courses.some((course) => c.popularCourses.includes(course))
+    );
+
+  // Fee range
+  if (feeRanges.length) {
+    result = result.filter((c) => {
+      return feeRanges.some((range) => {
+        if (range === "below1L") return c.startingFee < 100000;
+        if (range === "1to5L") return c.startingFee >= 100000 && c.startingFee < 500000;
+        if (range === "5to10L") return c.startingFee >= 500000 && c.startingFee < 1000000;
+        if (range === "above10L") return c.startingFee >= 1000000;
+        return false;
+      });
+    });
+  }
+
+  // Rating
+  if (ratings.length) {
+    const minRating = Math.max(...ratings.map(Number));
+    result = result.filter((c) => c.overallRating >= minRating);
+  }
+
+  // Avg package
+  if (avgPackages.length) {
+    const thresholds: Record<string, number> = {
+      above5: 500000, above10: 1000000, above20: 2000000,
+    };
+    const minPkg = Math.max(...avgPackages.map((k) => thresholds[k] ?? 0));
+    result = result.filter((c) => c.averagePackage >= minPkg);
+  }
+
+  // Highest package
+  if (highestPackages.length) {
+    const thresholds: Record<string, number> = {
+      above25: 2500000, above50: 5000000, above1Cr: 10000000,
+    };
+    const minPkg = Math.max(...highestPackages.map((k) => thresholds[k] ?? 0));
+    result = result.filter((c) => c.highestPackage >= minPkg);
+  }
+
+  // Placement %
+  if (placementPcts.length) {
+    const thresholds: Record<string, number> = {
+      above60: 60, above80: 80, above90: 90,
+    };
+    const minPct = Math.max(...placementPcts.map((k) => thresholds[k] ?? 0));
+    result = result.filter((c) => c.placementPercentage >= minPct);
+  }
+
+  // NIRF range
+  if (nirfRanges.length) {
+    const maxRank = Math.min(
+      ...nirfRanges.map((r) => {
+        if (r === "top10") return 10;
+        if (r === "top50") return 50;
+        if (r === "top100") return 100;
+        return 9999;
+      })
+    );
+    result = result.filter((c) => c.nirfRank <= maxRank);
+  }
+
+  // Sort
+  result = [...result].sort((a, b) => {
+    switch (sortBy) {
+      case "nirfRank": return a.nirfRank - b.nirfRank;
+      case "rating": return b.overallRating - a.overallRating;
+      case "avgPackage": return b.averagePackage - a.averagePackage;
+      case "highestPackage": return b.highestPackage - a.highestPackage;
+      case "fees": return a.startingFee - b.startingFee;
+      case "placement": return b.placementPercentage - a.placementPercentage;
+      default: return a.nirfRank - b.nirfRank;
+    }
+  });
+
+  return NextResponse.json({ data: result, total: result.length });
 }

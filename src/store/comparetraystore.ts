@@ -1,31 +1,31 @@
 import { create } from 'zustand'
-
-interface College {
-  id: string
-  name: string
-}
+import { persist } from 'zustand/middleware'
 
 interface CompareTrayStore {
-  tray: College[]
-  addToTray: (college: College) => void
-  removeFromTray: (id: string) => void
-  clearTray: () => void
+  compareIds: string[]
+  toggle: (id: string) => void
   isInTray: (id: string) => boolean
+  clear: () => void
 }
 
-export const useCompareTrayStore = create<CompareTrayStore>()((set, get) => ({
-  tray: [],
+export const useCompareTrayStore = create<CompareTrayStore>()(
+  persist(
+    (set, get) => ({
+      compareIds: [],
 
-  addToTray: (college) => {
-    if (get().tray.length >= 5) return   // max 5
-    if (get().isInTray(college.id)) return // no duplicates
-    set(state => ({ tray: [...state.tray, college] }))
-  },
+      toggle: (id) => {
+        const { compareIds } = get()
+        if (compareIds.includes(id)) {
+          set({ compareIds: compareIds.filter((c) => c !== id) })
+        } else if (compareIds.length < 5) {
+          set({ compareIds: [...compareIds, id] })
+        }
+      },
 
-  removeFromTray: (id) =>
-    set(state => ({ tray: state.tray.filter(c => c.id !== id) })),
+      isInTray: (id) => get().compareIds.includes(id),
 
-  clearTray: () => set({ tray: [] }),
-
-  isInTray: (id) => !!get().tray.find(c => c.id === id)
-}))
+      clear: () => set({ compareIds: [] }),
+    }),
+    { name: 'compare-tray' }
+  )
+)

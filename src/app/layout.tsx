@@ -1,39 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import Providers from "@/components/ui/providers";
+import Header from "@/components/ui/shared/Header";
+import Footer from "@/components/ui/shared/Footer";
+import { Providers } from "@/components/ui/providers";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CollegeHub",
-  description: "Find and compare the best colleges in India",
+  title: "CollegeHub — Discover, Compare & Shortlist Colleges",
+  description: "India's most loved college discovery platform.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en">
+      <body className={`${inter.className} flex flex-col min-h-screen bg-gray-50`}>
         <Providers>
-          {children}
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
