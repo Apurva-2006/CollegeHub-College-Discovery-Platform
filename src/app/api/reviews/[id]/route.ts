@@ -3,9 +3,11 @@ import reviews from '@/data/reviews.json'
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const review = reviews.find(r => r.id === params.id)
+  const { id } = await params
+
+  const review = reviews.find(r => r.id === id)
 
   if (!review) {
     return NextResponse.json(

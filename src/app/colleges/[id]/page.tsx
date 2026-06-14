@@ -7,6 +7,7 @@ import { getCollegeBySlug } from '@/services/collegeService'
 import { getCoursesByCollegeId } from '@/services/courseService'
 import { getReviewsByCollegeId } from '@/services/reviewService'
 import { type DetailTab } from '@/constants/filters'
+import { useRecentlyViewedStore } from '@/store/recentlyviewedstore' // ✅ Import store
 import CollegeDetailHeader from '@/components/college-detail/CollegeDetailHeader'
 import CollegeDetailTabs from '@/components/college-detail/CollegeDetailTabs'
 import OverviewTab from '@/components/college-detail/tabs/OverviewTab'
@@ -16,8 +17,9 @@ import ReviewsTab from '@/components/college-detail/tabs/ReviewsTab'
 import { ArrowLeft } from 'lucide-react'
 
 export default function CollegeDetailPage() {
-  const { slug } = useParams<{ slug: string }>()
+  const { id } = useParams<{ id: string }>()
   const router = useRouter()
+  const addViewedId = useRecentlyViewedStore((state) => state.addViewedId) // ✅ Extract track action
 
   const [college, setCollege]   = useState<College | null>(null)
   const [courses, setCourses]   = useState<Course[]>([])
@@ -27,12 +29,17 @@ export default function CollegeDetailPage() {
   const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
+    if (!id || id === 'undefined') return
     async function load() {
       setLoading(true)
       try {
-        const c = await getCollegeBySlug(slug)
+        const c = await getCollegeBySlug(id)
         if (!c) { setNotFound(true); return }
         setCollege(c)
+        
+        // ✅ Log the college view to history store
+        addViewedId(c.id)
+
         const [courseData, reviewData] = await Promise.all([
           getCoursesByCollegeId(c.id),
           getReviewsByCollegeId(c.id),
@@ -46,7 +53,7 @@ export default function CollegeDetailPage() {
       }
     }
     load()
-  }, [slug])
+  }, [id, addViewedId]) // ✅ Added addViewedId dependency
 
   if (loading) return (
     <div className="min-h-screen bg-gray-50/60 flex items-center justify-center">

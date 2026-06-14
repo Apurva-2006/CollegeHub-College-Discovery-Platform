@@ -1,88 +1,227 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
-import { College, Course, Review } from '@/types'
-import { getCollegeBySlug } from '@/services/collegeService'
-import { getCoursesByCollegeId } from '@/services/courseService'
-import { getReviewsByCollegeId } from '@/services/reviewService'
-import { type DetailTab } from '@/constants/filters'
-import CollegeDetailHeader from '@/components/college-detail/CollegeDetailHeader'
-import CollegeDetailTabs from '@/components/college-detail/CollegeDetailTabs'
-import OverviewTab from '@/components/college-detail/tabs/OverviewTab'
-import CoursesTab from '@/components/college-detail/tabs/CoursesTab'
-import PlacementsTab from '@/components/college-detail/tabs/PlacementsTab'
-import ReviewsTab from '@/components/college-detail/tabs/ReviewsTab'
-import { ArrowLeft } from 'lucide-react'
+import { useState, useEffect, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
+import { College, CollegeFilters } from "@/types";
+import FilterSidebar from "@/components/colleges/FilterSidebar";
+import CollegeCard from "@/components/colleges/CollegeCard";
+import ActiveFilterTags from "@/components/colleges/ActiveFilterTags";
+import { Search, ChevronDown, SlidersHorizontal, Inbox } from "lucide-react";
+import { cn } from "@/lib/utils";
+import CompareTray from "@/components/compare/CompareTray";
 
-export default function CollegeDetailPage() {
-  const { slug } = useParams<{ slug: string }>()
-  const router = useRouter()
+const DEFAULT_FILTERS: CollegeFilters = {
+  search: "", states: [], cities: [], feeRange: [], ratings: [],
+  avgPackage: [], highestPackage: [], placementPct: [],
+  nirfRange: [], courses: [], ownership: [], sortBy: "nirfRank",
+};
 
-  const [college, setCollege]     = useState<College | null>(null)
-  const [courses, setCourses]     = useState<Course[]>([])
-  const [reviews, setReviews]     = useState<Review[]>([])
-  const [activeTab, setActiveTab] = useState<DetailTab>('overview')
-  const [loading, setLoading]     = useState(true)
-  const [notFound, setNotFound]   = useState(false)
+const SORT_OPTIONS = [
+  { label: "Best NIRF rank", value: "nirfRank" },
+  { label: "Highest rating", value: "rating" },
+  { label: "Best avg package", value: "avgPackage" },
+  { label: "Highest package", value: "highestPackage" },
+  { label: "Lowest fees", value: "fees" },
+  { label: "Best placement %", value: "placement" },
+];
+
+function countActiveFilters(f: CollegeFilters): number {
+  return f.states.length + f.cities.length + f.feeRange.length + f.ratings.length +
+    f.avgPackage.length + f.highestPackage.length + f.placementPct.length +
+    f.nirfRange.length + f.courses.length + f.ownership.length;
+}
+
+export default function CollegesPage() {
+  const searchParams = useSearchParams();
+  const urlSearch = searchParams.get("search") || "";
+
+  const [filters, setFilters] = useState<CollegeFilters>({
+    ...DEFAULT_FILTERS,
+    search: urlSearch,
+  });
+  const [colleges, setColleges] = useState<College[]>([]);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [sortOpen, setSortOpen] = useState(false);
 
   useEffect(() => {
-    async function load() {
-      setLoading(true)
-      try {
-        const c = await getCollegeBySlug(slug)
-        if (!c) { setNotFound(true); return }
-        setCollege(c)
-        const [courseData, reviewData] = await Promise.all([
-          getCoursesByCollegeId(c.id),
-          getReviewsByCollegeId(c.id),
-        ])
-        setCourses(courseData)
-        setReviews(reviewData)
-      } catch {
-        setNotFound(true)
-      } finally {
-        setLoading(false)
-      }
+    setFilters((f) => ({ ...f, search: urlSearch }));
+  }, [urlSearch]);
+
+  const fetchColleges = useCallback(async (f: CollegeFilters) => {
+    setLoading(true);
+    try {
+      const params = new URLSearchParams();
+      if (f.search) params.set("search", f.search);
+      f.states.forEach((s) => params.append("state", s));
+      f.cities.forEach((c) => params.append("city", c));
+      f.feeRange.forEach((v) => params.append("fee", v));
+      f.ratings.forEach((v) => params.append("rating", v));
+      f.avgPackage.forEach((v) => params.append("avgPackage", v));
+      f.highestPackage.forEach((v) => params.append("highestPackage", v));
+      f.placementPct.forEach((v) => params.append("placementPct", v));
+      f.nirfRange.forEach((v) => params.append("nirf", v));
+      f.courses.forEach((v) => params.append("course", v));
+      f.ownership.forEach((v) => params.append("ownership", v));
+      params.set("sortBy", f.sortBy);
+
+      const res = await fetch(`/api/colleges?${params}`);
+      const json = await res.json();
+      setColleges(json.data);
+      setTotal(json.total);
+    } catch {
+      setColleges([]);
+      setTotal(0);
+    } finally {
+      setLoading(false);
     }
-    load()
-  }, [slug])
+  }, []);
 
-  if (loading) return (
-    <div className="min-h-screen bg-gray-50/60 flex items-center justify-center">
-      <div className="w-8 h-8 rounded-full border-2 border-[#6D28D9] border-t-transparent animate-spin" />
-    </div>
-  )
+  useEffect(() => {
+    const timer = setTimeout(() => fetchColleges(filters), 200);
+    return () => clearTimeout(timer);
+  }, [filters, fetchColleges]);
 
-  if (notFound || !college) return (
-    <div className="min-h-screen bg-gray-50/60 flex flex-col items-center justify-center gap-4">
-      <p className="text-gray-500 text-sm">College not found.</p>
-      <button onClick={() => router.push('/colleges')} className="text-[#6D28D9] text-sm underline">
-        Back to colleges
-      </button>
-    </div>
-  )
+  const activeCount = countActiveFilters(filters);
+  const sortLabel = SORT_OPTIONS.find((o) => o.value === filters.sortBy)?.label ?? "Sort";
 
   return (
-    <div className="min-h-screen bg-gray-50/60">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 pt-5">
-        <button
-          onClick={() => router.back()}
-          className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-800 transition-colors mb-4"
-        >
-          <ArrowLeft size={15} /> Back
-        </button>
+    <div className="min-h-screen bg-gray-50/60 pb-24">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-8">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-gray-900">Browse colleges</h1>
+          <p className="text-sm text-gray-500 mt-0.5">
+            {loading ? "Loading..." : `${total} colleges`}
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 mb-4">
+          <div className="relative flex-1">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <input
+              type="text"
+              value={filters.search}
+              onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
+              placeholder="Search colleges, courses or locations"
+              className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/20 focus:border-[#6D28D9] transition shadow-sm"
+            />
+          </div>
+
+          <div className="relative">
+            <button
+              onClick={() => setSortOpen(!sortOpen)}
+              className="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:border-gray-300 shadow-sm transition whitespace-nowrap"
+            >
+              <SlidersHorizontal size={14} className="text-gray-400" />
+              {sortLabel}
+              <ChevronDown size={13} className={cn("text-gray-400 transition-transform", sortOpen && "rotate-180")} />
+            </button>
+            {sortOpen && (
+              <div className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-1 z-30">
+                {SORT_OPTIONS.map((opt) => (
+                  <button
+                    key={opt.value}
+                    onClick={() => { setFilters((f) => ({ ...f, sortBy: opt.value })); setSortOpen(false); }}
+                    className={cn(
+                      "w-full text-left px-4 py-2 text-sm transition-colors",
+                      filters.sortBy === opt.value
+                        ? "bg-purple-50 text-[#6D28D9] font-medium"
+                        : "text-gray-600 hover:bg-gray-50"
+                    )}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <button
+            className="lg:hidden flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-200 rounded-xl text-sm shadow-sm"
+            onClick={() => setMobileSidebarOpen(true)}
+          >
+            <SlidersHorizontal size={15} />
+            {activeCount > 0 && (
+              <span className="w-4 h-4 rounded-full bg-[#6D28D9] text-white text-[10px] font-bold flex items-center justify-center">
+                {activeCount}
+              </span>
+            )}
+          </button>
+        </div>
+
+        {activeCount > 0 && (
+          <div className="mb-4">
+            <ActiveFilterTags filters={filters} onChange={setFilters} />
+          </div>
+        )}
+
+        <div className="flex gap-6">
+          <aside className="hidden lg:block w-72 shrink-0">
+            <div className="sticky top-24">
+              <FilterSidebar filters={filters} onChange={setFilters} activeCount={activeCount} />
+            </div>
+          </aside>
+
+          <main className="flex-1 min-w-0">
+            {loading ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i} className="bg-white rounded-2xl border border-gray-100 overflow-hidden animate-pulse">
+                    <div className="h-40 bg-gray-200" />
+                    <div className="p-4 space-y-3">
+                      <div className="h-4 bg-gray-200 rounded w-3/4" />
+                      <div className="h-3 bg-gray-100 rounded w-1/2" />
+                      <div className="grid grid-cols-2 gap-3 pt-2">
+                        {[...Array(4)].map((_, j) => <div key={j} className="h-8 bg-gray-100 rounded" />)}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : colleges.length === 0 ? (
+              <div className="flex flex-col items-center justify-center py-20 text-center bg-white rounded-2xl border border-gray-100">
+                <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-4">
+                  <Inbox size={24} className="text-gray-400" />
+                </div>
+                <h3 className="text-base font-semibold text-gray-800 mb-1">No colleges match your filters</h3>
+                <p className="text-sm text-gray-500 mb-5 max-w-xs">
+                  Try widening your criteria or removing some filters to see more results.
+                </p>
+                <button
+                  onClick={() => setFilters(DEFAULT_FILTERS)}
+                  className="px-5 py-2 bg-[#6D28D9] text-white text-sm font-medium rounded-xl hover:bg-[#5b21b6] transition-colors"
+                >
+                  Clear filters
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                {colleges.map((college) => (
+                  <CollegeCard key={college.id} college={college} />
+                ))}
+              </div>
+            )}
+          </main>
+        </div>
       </div>
 
-      <CollegeDetailHeader college={college} />
-      <CollegeDetailTabs active={activeTab} onChange={setActiveTab} />
+      <CompareTray />
 
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-6">
-        {activeTab === 'overview'   && <OverviewTab   college={college} />}
-        {activeTab === 'courses'    && <CoursesTab    courses={courses} />}
-        {activeTab === 'placements' && <PlacementsTab college={college} />}
-        {activeTab === 'reviews'    && <ReviewsTab    reviews={reviews} />}
-      </div>
+      {mobileSidebarOpen && (
+        <div className="lg:hidden fixed inset-0 z-50 flex">
+          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileSidebarOpen(false)} />
+          <div className="relative ml-auto w-80 max-w-full h-full bg-white overflow-y-auto shadow-xl">
+            <div className="sticky top-0 bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between z-10">
+              <span className="font-semibold text-gray-800">Filters</span>
+              <button onClick={() => setMobileSidebarOpen(false)} className="text-gray-500 hover:text-gray-800 text-lg">✕</button>
+            </div>
+            <div className="p-4">
+              <FilterSidebar filters={filters} onChange={setFilters} activeCount={activeCount} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }

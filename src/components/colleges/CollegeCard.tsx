@@ -1,10 +1,10 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { College } from "@/types";
 import { formatPackage, formatFee, formatReviewCount, cn } from "@/lib/utils";
 import { Bookmark, Scale, MapPin, Star, TrendingUp } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { useSavedCollegesStore } from "@/store/savedcollegestore";
 import { useCompareTrayStore } from "@/store/comparetraystore";
 
@@ -33,9 +33,16 @@ export default function CollegeCard({ college }: Props) {
   const { toggle: toggleSave, isSaved } = useSavedCollegesStore();
   const { toggle: toggleCompare, isInTray, compareIds } = useCompareTrayStore();
 
-  const saved = isSaved(college.id);
-  const inCompare = isInTray(college.id);
-  const compareFull = compareIds.length >= 5 && !inCompare;
+  // Guard against SSR/client hydration mismatch caused by
+  // localStorage-persisted store state differing from server's initial state.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const saved = mounted && isSaved(college.id);
+  const inCompare = mounted && isInTray(college.id);
+  const compareFull = mounted && compareIds.length >= 5 && !inCompare;
 
   return (
     <div className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-200 overflow-hidden flex flex-col">

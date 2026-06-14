@@ -3,11 +3,12 @@ import colleges from '@/data/colleges.json'
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  // supports both slug and id since they're the same in your JSON
+  const { id } = await params
+
   const college = colleges.find(
-    c => c.id === params.id || c.slug === params.id
+    c => c.id === id || c.slug === id
   )
 
   if (!college) {

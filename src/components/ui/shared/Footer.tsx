@@ -3,16 +3,14 @@ import { GraduationCap } from "lucide-react";
 
 const EXPLORE = [
   { label: "All Colleges", href: "/colleges" },
-  { label: "Rankings", href: "/rankings" },
   { label: "Compare", href: "/compare" },
   { label: "Saved Colleges", href: "/saved" },
 ];
 
 const STREAMS = [
   { label: "Engineering", href: "/colleges?course=B.Tech" },
-  { label: "MBA", href: "/colleges?course=MBA" },
+  { label: "Management", href: "/colleges?course=MBA" },
   { label: "Medical", href: "/colleges?course=MBBS" },
-  { label: "Design", href: "/colleges?course=B.Des" },
 ];
 
 const COMPANY = [
