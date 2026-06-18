@@ -8,9 +8,10 @@ const EXPLORE = [
 ];
 
 const STREAMS = [
-  { label: "Engineering", href: "/colleges?course=B.Tech" },
-  { label: "Management", href: "/colleges?course=MBA" },
+  { label: "Engineering", href: "/colleges?course=B.Tech&course=BCA" },
+  { label: "Management", href: "/colleges?course=MBA&course=BBA" },
   { label: "Medical", href: "/colleges?course=MBBS" },
+  { label: "Commerce", href: "/colleges?course=B.Com" },
 ];
 
 const COMPANY = [

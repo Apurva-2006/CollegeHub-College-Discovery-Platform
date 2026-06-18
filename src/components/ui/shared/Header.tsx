@@ -1,29 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { Bookmark, Search, LogIn, GraduationCap, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { Heart, Search, LogIn, GraduationCap, Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
+  const isSavedPage = pathname.startsWith("/saved");
+
+  // Keep the input in sync with the URL's "search" query param
+  // (works for /colleges?search=... and /saved?search=...)
+  useEffect(() => {
+    setSearchValue(searchParams.get("search") || "");
+  }, [searchParams]);
+
   const handleSearch = (value: string) => {
     setSearchValue(value);
+    const target = isSavedPage ? "/saved" : "/colleges";
     if (value.trim()) {
-      router.push(`/colleges?search=${encodeURIComponent(value.trim())}`);
+      router.push(`${target}?search=${encodeURIComponent(value.trim())}`);
     } else {
-      router.push("/colleges");
+      router.push(target);
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") handleSearch(searchValue);
   };
+
+  const placeholder = isSavedPage
+    ? "Search saved colleges, comparisons..."
+    : "Search colleges, courses, locations...";
+
+  const mobilePlaceholder = isSavedPage
+    ? "Search saved items..."
+    : "Search colleges, courses...";
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
@@ -37,9 +55,8 @@ export default function Header() {
           <span className="font-bold text-gray-900 text-lg tracking-tight">CollegeHub</span>
         </Link>
 
-        {/* Extended Search Bar + Colleges Tab (Side-by-Side Layout) */}
+        {/* Extended Search Bar + Colleges Tab */}
         <div className="hidden md:flex flex-1 items-center gap-4 px-2">
-          {/* Extended Search bar — flex-1 allows it to greedily occupy available space */}
           <div className="relative flex-1">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
             <input
@@ -47,7 +64,7 @@ export default function Header() {
               value={searchValue}
               onChange={(e) => handleSearch(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Search colleges, courses, locations..."
+              placeholder={placeholder}
               className="w-full pl-10 pr-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/20 focus:border-[#6D28D9] transition"
             />
             {searchValue && (
@@ -60,7 +77,6 @@ export default function Header() {
             )}
           </div>
 
-          {/* Colleges nav tab — shifted to the right side of the extended search input */}
           <Link
             href="/colleges"
             className={cn(
@@ -78,9 +94,14 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-1 shrink-0">
           <Link
             href="/saved"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            className={cn(
+              "flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-colors",
+              pathname === "/saved"
+                ? "text-[#FB7185] bg-rose-50"
+                : "text-gray-600 hover:text-[#FB7185] hover:bg-rose-50"
+            )}
           >
-            <Bookmark size={16} />
+            <Heart size={16} className={pathname === "/saved" ? "fill-[#FB7185]" : ""} />
             <span>Saved</span>
           </Link>
 
@@ -112,7 +133,7 @@ export default function Header() {
               value={searchValue}
               onChange={(e) => handleSearch(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Search colleges, courses..."
+              placeholder={mobilePlaceholder}
               className="w-full pl-9 pr-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/20 focus:border-[#6D28D9] transition"
             />
           </div>
@@ -131,9 +152,14 @@ export default function Header() {
           <Link
             href="/saved"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-50"
+            className={cn(
+              "flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+              pathname === "/saved"
+                ? "text-[#FB7185] bg-rose-50"
+                : "text-gray-600 hover:text-[#FB7185] hover:bg-rose-50"
+            )}
           >
-            <Bookmark size={15} /> Saved
+            <Heart size={15} className={pathname === "/saved" ? "fill-[#FB7185]" : ""} /> Saved
           </Link>
           <Link
             href="/signin"

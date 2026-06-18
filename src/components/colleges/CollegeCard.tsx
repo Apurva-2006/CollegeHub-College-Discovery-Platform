@@ -3,12 +3,11 @@
 import { useState, useEffect } from "react";
 import { College } from "@/types";
 import { formatPackage, formatFee, formatReviewCount, cn } from "@/lib/utils";
-import { Bookmark, Scale, MapPin, Star, TrendingUp } from "lucide-react";
+import { Heart, Scale, MapPin, Star, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { useSavedCollegesStore } from "@/store/savedcollegestore";
 import { useCompareTrayStore } from "@/store/comparetraystore";
 
-// College cover images mapped to category (fallback)
 const COVER_IMAGES: Record<string, string> = {
   Engineering: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=200&fit=crop",
   Management: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=200&fit=crop",
@@ -27,14 +26,14 @@ function getCover(college: College): string {
 
 interface Props {
   college: College;
+  rank?:number;
 }
 
 export default function CollegeCard({ college }: Props) {
   const { toggle: toggleSave, isSaved } = useSavedCollegesStore();
   const { toggle: toggleCompare, isInTray, compareIds } = useCompareTrayStore();
 
-  // Guard against SSR/client hydration mismatch caused by
-  // localStorage-persisted store state differing from server's initial state.
+  // Guard against SSR/client hydration mismatch from localStorage-persisted stores
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
@@ -58,18 +57,16 @@ export default function CollegeCard({ college }: Props) {
           <span className="text-[10px] font-bold text-[#6D28D9]">🏆</span>
           <span className="text-[11px] font-semibold text-gray-800">NIRF #{college.nirfRank}</span>
         </div>
-        {/* Bookmark */}
+        {/* Save (heart) */}
         <button
           onClick={() => toggleSave(college.id)}
           className={cn(
-            "absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all",
-            saved
-              ? "bg-[#6D28D9] text-white shadow"
-              : "bg-white/90 backdrop-blur-sm text-gray-500 hover:text-[#6D28D9] hover:bg-white shadow-sm"
+            "absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all bg-white/90 backdrop-blur-sm shadow-sm",
+            saved ? "text-[#FB7185]" : "text-gray-400 hover:text-[#FB7185] hover:bg-white"
           )}
           aria-label={saved ? "Remove from saved" : "Save college"}
         >
-          <Bookmark size={14} fill={saved ? "currentColor" : "none"} />
+          <Heart size={14} fill={saved ? "#FB7185" : "none"} stroke={saved ? "#FB7185" : "currentColor"} />
         </button>
       </div>
 

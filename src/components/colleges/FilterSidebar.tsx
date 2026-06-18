@@ -51,9 +51,10 @@ const FILTER_SECTIONS: Section[] = [
     filterKey: "courses",
     options: [
       { label: "B.Tech", value: "B.Tech" },
-      { label: "MBA", value: "MBA" },
-      { label: "BBA", value: "BBA" },
+      { label: "M.Tech", value: "M.Tech" },
       { label: "BCA", value: "BCA" },
+      { label: "BBA", value: "BBA" },
+      { label: "MBA", value: "MBA" },
       { label: "MBBS", value: "MBBS" },
       { label: "B.Com", value: "B.Com" },
     ],

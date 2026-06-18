@@ -7,7 +7,7 @@ import { useRecentComparisonsStore } from "@/store/recentcomparisonsstore";
 import { College } from "@/types";
 import EmptyCompare from "@/components/compare/EmptyCompare";
 import { formatPackage, formatFee, cn } from "@/lib/utils";
-import { Plus, Bookmark, X, Trophy, Star, Check } from "lucide-react";
+import { Plus, Heart, X, Trophy, Star, Check } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 type RowType = "text" | "number" | "rating" | "currency" | "percent" | "tags";
@@ -134,7 +134,7 @@ function SaveModal({ onSave, onClose, colleges }: { onSave: (label: string) => v
               label.trim() ? "bg-[#6D28D9] text-white hover:bg-[#5b21b6]" : "bg-gray-100 text-gray-300 cursor-not-allowed"
             )}
           >
-            <Bookmark size={14} /> Save
+            <Heart size={14} /> Save
           </button>
         </div>
       </div>
@@ -256,7 +256,7 @@ export default function ComparePage() {
                   </>
                 ) : (
                   <>
-                    <Bookmark size={14} /> Save
+                    <Heart size={14} /> Save
                   </>
                 )}
               </button>

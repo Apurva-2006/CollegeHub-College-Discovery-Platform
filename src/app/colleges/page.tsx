@@ -6,7 +6,7 @@ import { College, CollegeFilters } from "@/types";
 import FilterSidebar from "@/components/colleges/FilterSidebar";
 import CollegeCard from "@/components/colleges/CollegeCard";
 import ActiveFilterTags from "@/components/colleges/ActiveFilterTags";
-import { Search, ChevronDown, SlidersHorizontal, Inbox } from "lucide-react";
+import { ChevronDown, SlidersHorizontal, Inbox } from "lucide-react";
 import { cn } from "@/lib/utils";
 import CompareTray from "@/components/compare/CompareTray";
 
@@ -25,6 +25,14 @@ const SORT_OPTIONS = [
   { label: "Best placement %", value: "placement" },
 ];
 
+// Maps homepage category names → course filter values
+const CATEGORY_COURSE_MAP: Record<string, string[]> = {
+  Engineering: ["B.Tech", "BCA"],
+  Management: ["MBA", "BBA"],
+  Medical: ["MBBS"],
+  Commerce: ["B.Com"],
+};
+
 function countActiveFilters(f: CollegeFilters): number {
   return f.states.length + f.cities.length + f.feeRange.length + f.ratings.length +
     f.avgPackage.length + f.highestPackage.length + f.placementPct.length +
@@ -35,9 +43,21 @@ export default function CollegesPage() {
   const searchParams = useSearchParams();
   const urlSearch = searchParams.get("search") || "";
 
+  // On mount / URL change: resolve course filters from both ?course= and ?stream= params
+  const getInitialCourses = (): string[] => {
+    // ?course= can appear multiple times (e.g. ?course=B.Tech&course=BCA)
+    const coursesFromUrl = searchParams.getAll("course");
+    // ?stream= maps a category name to its courses
+    const stream = searchParams.get("stream") || "";
+    const coursesFromStream = CATEGORY_COURSE_MAP[stream] ?? [];
+    // merge, deduplicate
+    return Array.from(new Set([...coursesFromUrl, ...coursesFromStream]));
+  };
+
   const [filters, setFilters] = useState<CollegeFilters>({
     ...DEFAULT_FILTERS,
     search: urlSearch,
+    courses: getInitialCourses(),
   });
   const [colleges, setColleges] = useState<College[]>([]);
   const [total, setTotal] = useState(0);
@@ -45,9 +65,16 @@ export default function CollegesPage() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
 
+  // Keep search in sync with URL changes (e.g. header search bar)
   useEffect(() => {
     setFilters((f) => ({ ...f, search: urlSearch }));
   }, [urlSearch]);
+
+  // Sync courses when URL params change (e.g. navigating from homepage pill)
+  useEffect(() => {
+    setFilters((f) => ({ ...f, courses: getInitialCourses() }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   const fetchColleges = useCallback(async (f: CollegeFilters) => {
     setLoading(true);
@@ -89,65 +116,59 @@ export default function CollegesPage() {
   return (
     <div className="min-h-screen bg-gray-50/60 pb-24">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-8">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">Browse colleges</h1>
-          <p className="text-sm text-gray-500 mt-0.5">
-            {loading ? "Loading..." : `${total} colleges`}
-          </p>
-        </div>
-
-        <div className="flex items-center gap-3 mb-4">
-          <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <input
-              type="text"
-              value={filters.search}
-              onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
-              placeholder="Search colleges, courses or locations"
-              className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/20 focus:border-[#6D28D9] transition shadow-sm"
-            />
+        {/* Page Header with sort on the right */}
+        <div className="flex items-center justify-between mb-6 gap-3">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Browse colleges</h1>
+            <p className="text-sm text-gray-500 mt-0.5">
+              {loading ? "Loading..." : `${total} colleges`}
+            </p>
           </div>
 
-          <div className="relative">
+          <div className="flex items-center gap-2 shrink-0">
+            {/* Sort dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setSortOpen(!sortOpen)}
+                className="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:border-gray-300 shadow-sm transition whitespace-nowrap"
+              >
+                <SlidersHorizontal size={14} className="text-gray-400" />
+                {sortLabel}
+                <ChevronDown size={13} className={cn("text-gray-400 transition-transform", sortOpen && "rotate-180")} />
+              </button>
+              {sortOpen && (
+                <div className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-1 z-30">
+                  {SORT_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.value}
+                      onClick={() => { setFilters((f) => ({ ...f, sortBy: opt.value })); setSortOpen(false); }}
+                      className={cn(
+                        "w-full text-left px-4 py-2 text-sm transition-colors",
+                        filters.sortBy === opt.value
+                          ? "bg-purple-50 text-[#6D28D9] font-medium"
+                          : "text-gray-600 hover:bg-gray-50"
+                      )}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile filter toggle */}
             <button
-              onClick={() => setSortOpen(!sortOpen)}
-              className="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:border-gray-300 shadow-sm transition whitespace-nowrap"
+              className="lg:hidden flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-200 rounded-xl text-sm shadow-sm"
+              onClick={() => setMobileSidebarOpen(true)}
             >
-              <SlidersHorizontal size={14} className="text-gray-400" />
-              {sortLabel}
-              <ChevronDown size={13} className={cn("text-gray-400 transition-transform", sortOpen && "rotate-180")} />
+              <SlidersHorizontal size={15} />
+              {activeCount > 0 && (
+                <span className="w-4 h-4 rounded-full bg-[#6D28D9] text-white text-[10px] font-bold flex items-center justify-center">
+                  {activeCount}
+                </span>
+              )}
             </button>
-            {sortOpen && (
-              <div className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-1 z-30">
-                {SORT_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.value}
-                    onClick={() => { setFilters((f) => ({ ...f, sortBy: opt.value })); setSortOpen(false); }}
-                    className={cn(
-                      "w-full text-left px-4 py-2 text-sm transition-colors",
-                      filters.sortBy === opt.value
-                        ? "bg-purple-50 text-[#6D28D9] font-medium"
-                        : "text-gray-600 hover:bg-gray-50"
-                    )}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
-
-          <button
-            className="lg:hidden flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-200 rounded-xl text-sm shadow-sm"
-            onClick={() => setMobileSidebarOpen(true)}
-          >
-            <SlidersHorizontal size={15} />
-            {activeCount > 0 && (
-              <span className="w-4 h-4 rounded-full bg-[#6D28D9] text-white text-[10px] font-bold flex items-center justify-center">
-                {activeCount}
-              </span>
-            )}
-          </button>
         </div>
 
         {activeCount > 0 && (

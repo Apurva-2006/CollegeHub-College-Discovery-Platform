@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useSavedCollegesStore } from "@/store/savedcollegestore";
 import { useSavedComparisonsStore } from "@/store/savedcomparisonsstore";
 import { useRecentComparisonsStore } from "@/store/recentcomparisonsstore";
@@ -9,19 +10,18 @@ import { useCompareTrayStore } from "@/store/comparetraystore";
 import { College } from "@/types";
 import CollegeCard from "@/components/colleges/CollegeCard";
 import {
-  Bookmark,
+  Heart,
   Scale,
   Trash2,
   ChevronRight,
   BookmarkX,
   GitCompareArrows,
   Clock,
-  BookmarkPlus,
   Check,
   History,
   X,
+  Search as SearchIcon,
 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 type Tab = "saved-colleges" | "recently-viewed" | "saved-comparisons" | "recent-comparisons";
@@ -47,25 +47,23 @@ function SaveModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-      {/* Backdrop overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
-      
-      {/* Modal Container */}
+
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6 z-10 animate-in fade-in zoom-in-95 duration-150">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-base font-bold text-gray-900">Save Comparison</h3>
-          <button 
-            onClick={onClose} 
+          <button
+            onClick={onClose}
             className="w-7 h-7 rounded-lg flex items-center justify-center text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
           >
             <X size={15} />
           </button>
         </div>
-        
+
         <p className="text-sm text-gray-500 mb-4">
           Give this comparison a name so you can find it later in your Saved page.
         </p>
-        
+
         <input
           autoFocus
           type="text"
@@ -76,10 +74,10 @@ function SaveModal({
           maxLength={60}
           className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#6D28D9]/20 focus:border-[#6D28D9] transition mb-4"
         />
-        
+
         <div className="flex items-center gap-2">
-          <button 
-            onClick={onClose} 
+          <button
+            onClick={onClose}
             className="flex-1 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
           >
             Cancel
@@ -92,7 +90,7 @@ function SaveModal({
               label.trim() ? "bg-[#6D28D9] text-white hover:bg-[#5b21b6]" : "bg-gray-100 text-gray-300 cursor-not-allowed"
             )}
           >
-            <Bookmark size={14} /> Save
+            <Check size={14} /> Save
           </button>
         </div>
       </div>
@@ -185,6 +183,27 @@ function EmptyRecentComparisons() {
   );
 }
 
+// ─── No Search Results ─────────────────────────────────────────────────────────
+function NoSearchResults({ query, onClear }: { query: string; onClear: () => void }) {
+  return (
+    <div className="flex flex-col items-center justify-center py-16 text-center bg-white rounded-2xl border border-gray-100 p-8 shadow-sm">
+      <div className="w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center mb-5">
+        <SearchIcon size={26} className="text-gray-400" />
+      </div>
+      <h3 className="text-lg font-bold text-gray-900 mb-2">No matches for &ldquo;{query}&rdquo;</h3>
+      <p className="text-sm text-gray-500 max-w-xs leading-relaxed mb-6">
+        Try a different search term or clear the search to see everything in this tab.
+      </p>
+      <button
+        onClick={onClear}
+        className="px-5 py-2.5 bg-[#6D28D9] text-white text-sm font-semibold rounded-xl hover:bg-[#5b21b6] transition-colors shadow-sm"
+      >
+        Clear search
+      </button>
+    </div>
+  );
+}
+
 // ─── Comparison Cards ─────────────────────────────────────────────────────────
 function ComparisonSetCard({
   id, label, collegeIds, savedAt, allColleges, onLoad, onDelete,
@@ -262,8 +281,7 @@ function RecentComparisonCard({
   const colleges = collegeIds.map((cid) => allColleges.get(cid)).filter(Boolean) as College[];
   const date = new Date(viewedAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
   const autoLabel = colleges.length > 0 ? colleges.map((c) => c.shortName).join(" vs ") : `${collegeIds.length} colleges`;
-  
-  // Use custom customLabel if explicitly saved previously
+
   const displayLabel = customLabel || autoLabel;
 
   return (
@@ -280,11 +298,11 @@ function RecentComparisonCard({
           className={cn(
             "shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
             isSaved
-              ? "text-emerald-500 bg-emerald-50 cursor-default"
-              : "text-gray-300 hover:text-[#6D28D9] hover:bg-purple-50"
+              ? "text-[#FB7185] bg-rose-50 cursor-default"
+              : "text-gray-300 hover:text-[#FB7185] hover:bg-rose-50"
           )}
         >
-          {isSaved ? <Check size={14} /> : <BookmarkPlus size={14} />}
+          <Heart size={14} className={isSaved ? "fill-[#FB7185]" : ""} />
         </button>
       </div>
 
@@ -335,10 +353,14 @@ function ActiveTabHeader({ title, count, onClear, clearLabel = "Clear all" }: {
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function SavedPage() {
   const [tab, setTab] = useState<Tab>("saved-colleges");
+
+  // Clear search whenever the active tab changes
+  useEffect(() => {
+    router.push("/saved");
+  }, [tab]);
   const [collegeMap, setCollegeMap] = useState<Map<string, College>>(new Map());
   const [loading, setLoading] = useState(true);
 
-  // Modal active group state tracker configuration
   const [pendingSave, setPendingSave] = useState<{ ids: string[]; label: string } | null>(null);
 
   const { savedIds, clearAll: clearSaved } = useSavedCollegesStore();
@@ -347,6 +369,11 @@ export default function SavedPage() {
   const { viewedIds, clearHistory: clearRecentlyViewed } = useRecentlyViewedStore();
   const { clear: clearTray, toggle: toggleTray } = useCompareTrayStore();
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // ── Search query from the header search bar (?search=...) ──
+  const searchQuery = (searchParams.get("search") || "").trim();
+  const clearSearch = () => router.push("/saved");
 
   useEffect(() => {
     const allIds = Array.from(new Set([
@@ -384,7 +411,7 @@ export default function SavedPage() {
     clearTray();
     setTimeout(() => {
       ids.forEach((id) => toggleTray(id));
-      
+
       if (savedId) {
         router.push(`/compare?source=saved&savedId=${savedId}`);
       } else {
@@ -401,6 +428,54 @@ export default function SavedPage() {
 
   const savedColleges = savedIds.map((id) => collegeMap.get(id)).filter(Boolean) as College[];
   const recentlyViewedColleges = viewedIds.map((id) => collegeMap.get(id)).filter(Boolean) as College[];
+
+  // ── Search matching helpers ──
+  const collegeMatches = (college: College) => {
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return (
+      college.name.toLowerCase().includes(q) ||
+      college.shortName.toLowerCase().includes(q) ||
+      college.location.toLowerCase().includes(q)
+    );
+  };
+
+  const comparisonMatches = (label: string, collegeIds: string[]) => {
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    if (label.toLowerCase().includes(q)) return true;
+    return collegeIds.some((id) => {
+      const c = collegeMap.get(id);
+      return c ? collegeMatches(c) : false;
+    });
+  };
+
+  const filteredSavedColleges = useMemo(
+    () => savedColleges.filter(collegeMatches),
+    [savedColleges, searchQuery]
+  );
+
+  const filteredRecentlyViewed = useMemo(
+    () => recentlyViewedColleges.filter(collegeMatches),
+    [recentlyViewedColleges, searchQuery]
+  );
+
+  const filteredComparisons = useMemo(
+    () => comparisons.filter((c) => comparisonMatches(c.label, c.collegeIds)),
+    [comparisons, searchQuery, collegeMap]
+  );
+
+  const filteredRecentComparisons = useMemo(
+    () =>
+      recentComparisons.filter((r) => {
+        const autoLabel = r.collegeIds
+          .map((id) => collegeMap.get(id)?.shortName)
+          .filter(Boolean)
+          .join(" vs ");
+        return comparisonMatches(autoLabel, r.collegeIds);
+      }),
+    [recentComparisons, searchQuery, collegeMap]
+  );
 
   const renderSkeletonGrid = (count = 3) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -419,10 +494,21 @@ export default function SavedPage() {
   return (
     <div className="min-h-screen bg-gray-50/60">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-8">
-        
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">Workspace</h1>
-          <p className="text-sm text-gray-500 mt-0.5">Track bookmarks, execution histories, and saved comparison models.</p>
+
+        <div className="mb-6 flex items-start justify-between gap-3 flex-wrap">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Workspace</h1>
+            <p className="text-sm text-gray-500 mt-0.5">Track bookmarks, execution histories, and saved comparison models.</p>
+          </div>
+          {searchQuery && (
+            <div className="flex items-center gap-2 text-sm bg-purple-50 text-[#6D28D9] px-3 py-1.5 rounded-xl border border-purple-100">
+              <SearchIcon size={14} />
+              <span>Showing results for &ldquo;{searchQuery}&rdquo;</span>
+              <button onClick={clearSearch} className="hover:text-[#5b21b6]">
+                <X size={14} />
+              </button>
+            </div>
+          )}
         </div>
 
         {/* 4 Tabs Side-by-Side Strip */}
@@ -434,9 +520,9 @@ export default function SavedPage() {
               tab === "saved-colleges" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
             )}
           >
-            <Bookmark size={14} /> Saved Colleges
+            <Heart size={14} className="text-[#FB7185] fill-[#FB7185]" /> Saved Colleges
             {savedIds.length > 0 && (
-              <span className={cn("w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center", tab === "saved-colleges" ? "bg-[#6D28D9] text-white" : "bg-gray-300 text-gray-600")}>
+              <span className={cn("w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center", tab === "saved-colleges" ? "bg-[#FB7185] text-white" : "bg-gray-300 text-gray-600")}>
                 {savedIds.length}
               </span>
             )}
@@ -464,7 +550,7 @@ export default function SavedPage() {
               tab === "saved-comparisons" ? "bg-white text-gray-900 shadow-sm" : "text-gray-500 hover:text-gray-700"
             )}
           >
-            <Scale size={14} /> Saved Comparisons
+            <Heart size={14} className="text-[#FB7185] fill-[#FB7185]" /> Saved Comparisons
             {comparisons.length > 0 && (
               <span className={cn("w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center", tab === "saved-comparisons" ? "bg-[#6D28D9] text-white" : "bg-gray-300 text-gray-600")}>
                 {comparisons.length}
@@ -497,9 +583,11 @@ export default function SavedPage() {
                 renderSkeletonGrid()
               ) : savedColleges.length === 0 ? (
                 <EmptySavedColleges />
+              ) : filteredSavedColleges.length === 0 ? (
+                <NoSearchResults query={searchQuery} onClear={clearSearch} />
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {savedColleges.map((college) => (
+                  {filteredSavedColleges.map((college) => (
                     <CollegeCard key={college.id} college={college} />
                   ))}
                 </div>
@@ -514,9 +602,11 @@ export default function SavedPage() {
                 renderSkeletonGrid()
               ) : recentlyViewedColleges.length === 0 ? (
                 <EmptyRecentlyViewed />
+              ) : filteredRecentlyViewed.length === 0 ? (
+                <NoSearchResults query={searchQuery} onClear={clearSearch} />
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                  {recentlyViewedColleges.map((college) => (
+                  {filteredRecentlyViewed.map((college) => (
                     <CollegeCard key={college.id} college={college} />
                   ))}
                 </div>
@@ -529,9 +619,11 @@ export default function SavedPage() {
               <ActiveTabHeader title="Saved Target Comparisons" count={comparisons.length} onClear={clearComparisons} clearLabel="Remove all" />
               {comparisons.length === 0 ? (
                 <EmptySavedComparisons />
+              ) : filteredComparisons.length === 0 ? (
+                <NoSearchResults query={searchQuery} onClear={clearSearch} />
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {[...comparisons]
+                  {[...filteredComparisons]
                     .sort((a, b) => new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime())
                     .map((comp) => (
                       <ComparisonSetCard
@@ -561,15 +653,16 @@ export default function SavedPage() {
                 </div>
               ) : recentComparisons.length === 0 ? (
                 <EmptyRecentComparisons />
+              ) : filteredRecentComparisons.length === 0 ? (
+                <NoSearchResults query={searchQuery} onClear={clearSearch} />
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {recentComparisons.map((recent) => {
-                    // RUNTIME LOOKUP: Match the sorting signature against active saved state models
+                  {filteredRecentComparisons.map((recent) => {
                     const currentRecentKey = [...recent.collegeIds].sort().join(",");
                     const matchingSaved = comparisons.find(
                       (c) => [...c.collegeIds].sort().join(",") === currentRecentKey
                     );
-                    
+
                     return (
                       <RecentComparisonCard
                         key={recent.id}
@@ -579,8 +672,8 @@ export default function SavedPage() {
                         onLoad={handleLoadComparison}
                         onSave={handleQuickSave}
                         isSaved={!!matchingSaved}
-                        customLabel={matchingSaved?.label} // Updates element string label reactively
-                        savedId={matchingSaved?.id}        // Forwards contextual id route values
+                        customLabel={matchingSaved?.label}
+                        savedId={matchingSaved?.id}
                       />
                     );
                   })}

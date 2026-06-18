@@ -3,31 +3,27 @@ import {
   Search,
   ArrowRight,
   Star,
-  MapPin,
-  TrendingUp,
   BookOpen,
   MessageSquare,
   Users,
   ShieldCheck,
   RefreshCw,
   Heart,
-  Scale,
-  ExternalLink,
-  Bookmark,
   Cpu,
   Briefcase,
   Stethoscope,
   LayoutGrid,
-  Palette,
   BarChart2,
   Code2,
   GraduationCap,
+  Palette,
+  TrendingUp,
 } from "lucide-react";
 import colleges from "@/data/colleges.json";
 import reviews from "@/data/reviews.json";
 import CollegeCard from "@/components/colleges/CollegeCard";
 
-// ─── helpers ────────────────────────────────────────────────────────────────
+// ─── helpers ─────────────────────────────────────────────────────────────────
 const fmt = (n: number) =>
   n >= 10000000
     ? `₹${(n / 10000000).toFixed(1)} Cr`
@@ -38,9 +34,7 @@ const fmt = (n: number) =>
 const fmtLPA = (n: number) => `₹${(n / 100000).toFixed(1)} LPA`;
 
 // ─── data slices ─────────────────────────────────────────────────────────────
-const featured = (colleges as any[])
-  .filter((c) => c.featured)
-  .slice(0, 3);
+const featured = (colleges as any[]).filter((c) => c.featured).slice(0, 3);
 
 const topRanked = [...(colleges as any[])]
   .filter((c) => c.nirfRank)
@@ -59,29 +53,23 @@ const STREAMS = [
   { name: "MBA", desc: "Management postgraduate programs", count: "12+", icon: Briefcase, color: "bg-teal-50 text-teal-600" },
   { name: "MBBS", desc: "Medical undergraduate programs", count: "6+", icon: Stethoscope, color: "bg-rose-50 text-rose-500" },
   { name: "B.Com", desc: "Commerce undergraduate programs", count: "4+", icon: LayoutGrid, color: "bg-amber-50 text-amber-600" },
-  { name: "BBA", desc: "Business administration programs", count: "7+", icon: BarChart2, color: "bg-green-50 text-green-600" },
-  { name: "BCA", desc: "Computer applications programs", count: "6+", icon: Code2, color: "bg-indigo-50 text-indigo-600" },
+  { name: "BBA", desc: "Business administration programs", count: "2+", icon: BarChart2, color: "bg-green-50 text-green-600" },
+  { name: "BCA", desc: "Computer applications programs", count: "2+", icon: Code2, color: "bg-indigo-50 text-indigo-600" },
   { name: "M.Tech", desc: "Engineering postgraduate programs", count: "14+", icon: GraduationCap, color: "bg-violet-50 text-violet-600" },
 ];
 
 const BROWSE_STREAMS = [
-  { name: "Engineering", count: 8 },
-  { name: "Management", count: 5 },
-  { name: "Medical", count: 4 },
-  { name: "Commerce", count: 4 },
+  { name: "Engineering", count: 43, courses: ["B.Tech","M.Tech", "BCA"] },
+  { name: "Management", count: 25, courses: ["MBA", "BBA"] },
+  { name: "Medical", count: 4, courses: ["MBBS"] },
+  { name: "Commerce", count: 4, courses: ["B.Com"] },
 ];
 
-// ─── sub-components ──────────────────────────────────────────────────────────
+// ─── sub-components ───────────────────────────────────────────────────────────
 function SectionHeader({
-  eyebrow,
-  title,
-  subtitle,
-  href,
+  eyebrow, title, subtitle, href,
 }: {
-  eyebrow: string;
-  title: string;
-  subtitle: string;
-  href?: string;
+  eyebrow: string; title: string; subtitle: string; href?: string;
 }) {
   return (
     <div className="flex items-end justify-between mb-7">
@@ -99,70 +87,90 @@ function SectionHeader({
   );
 }
 
-// ─── page ────────────────────────────────────────────────────────────────────
+// ─── page ─────────────────────────────────────────────────────────────────────
 export default function HomePage() {
   return (
     <div className="bg-white">
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-teal-50/40 pt-16 pb-20 px-4">
-        {/* Soft blobs */}
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-teal-200/20 rounded-full blur-3xl pointer-events-none" />
+      {/* ── HERO ──────────────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden pt-20 pb-24 px-4"
+        style={{
+          background: "linear-gradient(135deg, #F3E8FF 0%, #EFF6FF 35%, #FFFFFF 65%, #FDF2F8 100%)",
+        }}
+      >
+        {/* Ambient background blobs matching the soft lighting of the image */}
+        <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-[#E0F2FE]/40 rounded-full blur-3xl pointer-events-none animate-pulse" />
+        <div className="absolute top-5 right-1/4 w-[450px] h-[450px] bg-[#FAE8FF]/50 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative max-w-3xl mx-auto text-center">
+        <div className="relative max-w-4xl mx-auto text-center">
           {/* Trust badge */}
-          <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 bg-white border border-gray-200 shadow-sm px-3 py-1.5 rounded-full mb-6">
-            <span className="text-[#6D28D9]">✦</span> Trusted by 2.4M+ students across India
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4A4A6A] bg-white border border-[#E4E4E7] shadow-sm px-4 py-1.5 rounded-full mb-8">
+            <span className="text-[#8B5CF6]">✨</span> Trusted by 2.4M+ students across India
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-gray-900">
+          {/* Headline — Matches the color gradients exactly as shown in the picture */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-[#1E1B4B]">
             Find Your{" "}
-            <span className="text-[#6D28D9]">Perfect</span>{" "}
-            <span className="text-[#14B8A6]">College</span>
+            <span className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#4F46E5] bg-clip-text text-transparent">
+              Perfect
+            </span>{" "}
+            <span className="bg-gradient-to-r from-[#0D9488] via-[#14B8A6] to-[#F43F5E] bg-clip-text text-transparent">
+              College
+            </span>
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-gray-500 max-w-xl mx-auto">
+
+          <p className="mt-5 text-sm sm:text-base md:text-lg text-[#6B7280] font-medium max-w-2xl mx-auto leading-relaxed">
             Search, compare and shortlist colleges based on placements,
             rankings, fees and student reviews — all in one beautiful place.
           </p>
 
-          {/* Search bar */}
-          <div className="mt-8 flex items-center gap-2 bg-white border border-gray-200 shadow-lg rounded-2xl px-4 py-2.5 max-w-xl mx-auto">
-            <Search size={18} className="text-gray-400 shrink-0" />
-            <Link href="/colleges" className="flex-1 text-sm text-gray-400 text-left">
+          {/* Search bar wrapper matching the image styling */}
+          <div className="mt-10 flex items-center bg-white border border-[#E4E4E7] shadow-md hover:shadow-lg rounded-2xl p-2 max-w-2xl mx-auto transition-shadow">
+            <Search size={20} className="text-[#9CA3AF] shrink-0 ml-3" />
+            <Link href="/colleges" className="flex-1 text-sm text-[#9CA3AF] text-left py-3 px-3 font-medium">
               Search by college, course or city...
             </Link>
             <Link
               href="/colleges"
-              className="shrink-0 bg-[#6D28D9] hover:bg-[#5b21b6] text-white text-sm font-semibold px-5 py-2 rounded-xl flex items-center gap-1.5 transition-colors"
+              className="shrink-0 bg-[#6D28D9] hover:bg-[#5b21b6] text-white text-sm font-bold px-7 py-3 rounded-xl flex items-center gap-2 transition-all shadow-sm"
             >
-              Search <ArrowRight size={14} />
+              Search <ArrowRight size={15} />
             </Link>
           </div>
 
-          {/* Stream pills */}
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
+          {/* Stream pills with original color palettes & true outline icons from the layout view */}
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
             {[
-              { label: "Engineering", icon: "🖥️", course: "B.Tech" },
-              { label: "Management", icon: "💼", course: "MBA" },
-              { label: "Medical", icon: "🩺", course: "MBBS" },
-              { label: "Commerce", icon: "📊", course: "B.Com" },
-            ].map((s) => (
-              <Link
-                key={s.label}
-                href={`/colleges?course=${s.course}`}
-                className="flex items-center gap-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-200 hover:border-purple-300 hover:text-[#6D28D9] px-3 py-1.5 rounded-full transition-colors shadow-sm"
-              >
-                <span>{s.icon}</span> {s.label}
-              </Link>
-            ))}
+              { label: "Engineering", icon: Cpu, courses: ["B.Tech","M.Tech", "BCA"], pill: "bg-[#F3E8FF] text-[#6B21A8] hover:bg-[#E9D5FF]" },
+              { label: "Management", icon: Briefcase, courses: ["MBA", "BBA"], pill: "bg-[#E6FFFA] text-[#047857] hover:bg-[#CCFBF1]" },
+              { label: "Medical", icon: Stethoscope, courses: ["MBBS"], pill: "bg-[#FFE4E6] text-[#BE123C] hover:bg-[#FECDD3]" },
+              { label: "Commerce", icon: LayoutGrid, courses: ["B.Com"], pill: "bg-[#FEF3C7] text-[#92400E] hover:bg-[#FEF3C7]" },
+            ].map((s) => {
+              const IconComponent = s.icon;
+              return (
+                <Link
+                  key={s.label}
+                  href={`/colleges?${s.courses.map((c) => `course=${encodeURIComponent(c)}`).join("&")}`}
+                  className={`flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-full transition-all border border-transparent tracking-wide ${s.pill}`}
+                >
+                  <IconComponent size={14} className="opacity-90" />
+                  <span>{s.label}</span>
+                </Link>
+              );
+            })}
           </div>
 
           {/* Trust signals */}
-          <div className="mt-6 flex items-center justify-center gap-6 text-xs text-gray-500">
-            <span className="flex items-center gap-1.5"><ShieldCheck size={13} className="text-[#14B8A6]" /> Verified Data</span>
-            <span className="flex items-center gap-1.5"><RefreshCw size={13} className="text-[#6D28D9]" /> Updated Daily</span>
-            <span className="flex items-center gap-1.5"><Heart size={13} className="text-[#FB7185]" /> Loved by 12K+ students</span>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs text-[#6B7280] font-semibold">
+            <span className="flex items-center gap-2">
+              <ShieldCheck size={15} className="text-[#10B981]" /> Verified Data
+            </span>
+            <span className="flex items-center gap-2">
+              <TrendingUp size={15} className="text-[#6D28D9]" /> Updated Daily
+            </span>
+            <span className="flex items-center gap-2">
+              <Heart size={15} className="text-[#F43F5E]" /> Loved by 12K+ students
+            </span>
           </div>
         </div>
       </section>
@@ -180,7 +188,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TOP RANKED ───────────────────────────────────────────────────── */}
+      {/* ── TOP RANKED ────────────────────────────────────────────────────── */}
       <section className="bg-gray-50/70 py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
           <SectionHeader
@@ -190,12 +198,12 @@ export default function HomePage() {
             href="/rankings"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {topRanked.map((c, i) => <CollegeCard key={c.id} college={c} rank={i + 1} />)}
+            {topRanked.map((c) => <CollegeCard key={c.id} college={c} />)}
           </div>
         </div>
       </section>
 
-      {/* ── BEST PLACEMENT ───────────────────────────────────────────────── */}
+      {/* ── BEST PLACEMENT ────────────────────────────────────────────────── */}
       <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-16">
         <SectionHeader
           eyebrow="Placements"
@@ -208,7 +216,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── POPULAR COURSES ──────────────────────────────────────────────── */}
+      {/* ── POPULAR COURSES ───────────────────────────────────────────────── */}
       <section className="bg-gray-50/70 py-16">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
           <SectionHeader
@@ -243,7 +251,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STUDENT REVIEWS ──────────────────────────────────────────────── */}
+      {/* ── STUDENT REVIEWS ───────────────────────────────────────────────── */}
       <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-16">
         <SectionHeader
           eyebrow="Reviews"
@@ -285,8 +293,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PLATFORM STATS ───────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-br from-purple-50 via-white to-teal-50/40 py-16">
+      {/* ── PLATFORM STATS ────────────────────────────────────────────────── */}
+      <section className="py-16"
+        style={{
+          background: "linear-gradient(135deg, #F3E8FF 0%, #EFF6FF 35%, #FFFFFF 65%, #FDF2F8 100%)",
+        }}
+      >
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 text-center">
           <span className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 px-3 py-1 rounded-full">Platform Stats</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-10">
@@ -315,7 +327,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BROWSE BY STREAM + CTA ───────────────────────────────────────── */}
+      {/* ── BROWSE BY STREAM + CTA ────────────────────────────────────────── */}
       <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-16">
         <p className="text-[11px] font-semibold text-[#6D28D9] uppercase tracking-widest mb-1">Popular</p>
         <h2 className="text-xl font-bold text-gray-900 mb-5">Browse by stream</h2>
@@ -324,7 +336,7 @@ export default function HomePage() {
           {BROWSE_STREAMS.map((s) => (
             <Link
               key={s.name}
-              href={`/colleges?stream=${s.name}`}
+              href={`/colleges?${s.courses.map((c) => `course=${encodeURIComponent(c)}`).join("&")}`}
               className="flex items-center justify-between gap-6 bg-white border border-gray-200 rounded-xl px-5 py-3 hover:border-purple-300 hover:shadow-sm transition-all group"
             >
               <div>
