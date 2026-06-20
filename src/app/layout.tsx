@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/ui/shared/Header";
 import Footer from "@/components/ui/shared/Footer";
 import { Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

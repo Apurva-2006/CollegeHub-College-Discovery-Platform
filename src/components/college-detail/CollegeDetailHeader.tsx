@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { MapPin, Calendar, BadgeCheck, Bookmark, GitCompareArrows, Star, TrendingUp, Users } from 'lucide-react'
+import { MapPin, Calendar, BadgeCheck, Heart, Scale, Star, TrendingUp, Users } from 'lucide-react'
 import { College } from '@/types'
 import { formatPackage } from '@/lib/utils'
 import { useSavedCollegesStore } from '@/store/savedcollegestore'
@@ -70,7 +70,7 @@ export default function CollegeDetailHeader({ college }: Props) {
                         : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
                     )}
                   >
-                    <Bookmark size={14} className={saved ? 'fill-[#6D28D9]' : ''} />
+                    <Heart size={14} className={saved ? 'fill-[#6D28D9]' : ''} />
                     {saved ? 'Saved' : 'Save'}
                   </button>
                   <button
@@ -82,7 +82,7 @@ export default function CollegeDetailHeader({ college }: Props) {
                         : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
                     )}
                   >
-                    <GitCompareArrows size={14} />
+                    <Scale size={14} />
                     {inTray ? 'Added' : 'Compare'}
                   </button>
                 </div>
