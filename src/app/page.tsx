@@ -7,7 +7,6 @@ import {
   MessageSquare,
   Users,
   ShieldCheck,
-  RefreshCw,
   Heart,
   Cpu,
   Briefcase,
@@ -16,37 +15,28 @@ import {
   BarChart2,
   Code2,
   GraduationCap,
-  Palette,
   TrendingUp,
 } from "lucide-react";
 import colleges from "@/data/colleges.json";
 import reviews from "@/data/reviews.json";
 import CollegeCard from "@/components/colleges/CollegeCard";
-
-// ─── helpers ─────────────────────────────────────────────────────────────────
-const fmt = (n: number) =>
-  n >= 10000000
-    ? `₹${(n / 10000000).toFixed(1)} Cr`
-    : n >= 100000
-    ? `₹${(n / 100000).toFixed(1)} L`
-    : `₹${(n / 100000).toFixed(0)}K`;
-
-const fmtLPA = (n: number) => `₹${(n / 100000).toFixed(1)} LPA`;
+import type { College } from "@/types/college";
+import type { Review } from "@/types/review";
 
 // ─── data slices ─────────────────────────────────────────────────────────────
-const featured = (colleges as any[]).filter((c) => c.featured).slice(0, 3);
+const featured = (colleges as College[]).filter((c) => c.featured).slice(0, 3);
 
-const topRanked = [...(colleges as any[])]
+const topRanked = [...(colleges as College[])]
   .filter((c) => c.nirfRank)
-  .sort((a, b) => a.nirfRank - b.nirfRank)
+  .sort((a, b) => (a.nirfRank ?? 0) - (b.nirfRank ?? 0))
   .slice(0, 4);
 
-const topPlacement = [...(colleges as any[])]
+const topPlacement = [...(colleges as College[])]
   .filter((c) => c.topPlacement)
   .sort((a, b) => b.averagePackage - a.averagePackage)
   .slice(0, 3);
 
-const highlightedReviews = (reviews as any[]).slice(0, 6);
+const highlightedReviews = (reviews as Review[]).slice(0, 6);
 
 const STREAMS = [
   { name: "B.Tech", desc: "Engineering undergraduate programs", count: "18+", icon: Cpu, color: "bg-purple-50 text-purple-600" },
@@ -98,17 +88,14 @@ export default function HomePage() {
           background: "linear-gradient(135deg, #F3E8FF 0%, #EFF6FF 35%, #FFFFFF 65%, #FDF2F8 100%)",
         }}
       >
-        {/* Ambient background blobs matching the soft lighting of the image */}
         <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-[#E0F2FE]/40 rounded-full blur-3xl pointer-events-none animate-pulse" />
         <div className="absolute top-5 right-1/4 w-[450px] h-[450px] bg-[#FAE8FF]/50 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto text-center">
-          {/* Trust badge */}
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4A4A6A] bg-white border border-[#E4E4E7] shadow-sm px-4 py-1.5 rounded-full mb-8">
             <span className="text-[#8B5CF6]">✨</span> Trusted by 2.4M+ students across India
           </span>
 
-          {/* Headline — Matches the color gradients exactly as shown in the picture */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none text-[#1E1B4B]">
             Find Your{" "}
             <span className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#4F46E5] bg-clip-text text-transparent">
@@ -124,7 +111,6 @@ export default function HomePage() {
             rankings, fees and student reviews — all in one beautiful place.
           </p>
 
-          {/* Search bar wrapper matching the image styling */}
           <div className="mt-10 flex items-center bg-white border border-[#E4E4E7] shadow-md hover:shadow-lg rounded-2xl p-2 max-w-2xl mx-auto transition-shadow">
             <Search size={20} className="text-[#9CA3AF] shrink-0 ml-3" />
             <Link href="/colleges" className="flex-1 text-sm text-[#9CA3AF] text-left py-3 px-3 font-medium">
@@ -138,7 +124,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Stream pills with original color palettes & true outline icons from the layout view */}
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {[
               { label: "Engineering", icon: Cpu, courses: ["B.Tech","M.Tech", "BCA"], pill: "bg-[#F3E8FF] text-[#6B21A8] hover:bg-[#E9D5FF]" },
@@ -160,7 +145,6 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* Trust signals */}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs text-[#6B7280] font-semibold">
             <span className="flex items-center gap-2">
               <ShieldCheck size={15} className="text-[#10B981]" /> Verified Data
@@ -259,8 +243,8 @@ export default function HomePage() {
           subtitle="Real stories from real campuses"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {highlightedReviews.map((r: any) => {
-            const college = (colleges as any[]).find((c) => c.id === r.collegeId);
+          {highlightedReviews.map((r) => {
+            const college = (colleges as College[]).find((c) => c.id === r.collegeId);
             return (
               <div key={r.id} className="bg-white border border-gray-100 rounded-2xl p-5 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow">
                 <MessageSquare size={24} className="text-gray-100" />
@@ -302,7 +286,7 @@ export default function HomePage() {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 text-center">
           <span className="text-xs font-semibold text-gray-500 bg-white border border-gray-200 px-3 py-1 rounded-full">Platform Stats</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-4 mb-10">
-            India's most loved college platform
+            India&apos;s most loved college platform
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[

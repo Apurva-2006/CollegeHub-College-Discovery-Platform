@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useCompareTrayStore } from "@/store/comparetraystore";
 import { useSavedComparisonsStore } from "@/store/savedcomparisonsstore";
 import { useRecentComparisonsStore } from "@/store/recentcomparisonsstore";
@@ -142,7 +142,7 @@ function SaveModal({ onSave, onClose, colleges }: { onSave: (label: string) => v
   );
 }
 
-export default function ComparePage() {
+function ComparePageInner() {
   const { compareIds, toggle, clear } = useCompareTrayStore();
   const { comparisons, saveComparison } = useSavedComparisonsStore();
   const { addRecentComparison } = useRecentComparisonsStore();
@@ -152,23 +152,20 @@ export default function ComparePage() {
   const isFromSaved = searchParams.get("source") === "saved";
   const urlSavedId = searchParams.get("savedId");
 
-  const [colleges, setColleges] = useState<College[]>([]);
+  const [fetchedColleges, setFetchedColleges] = useState<College[]>([]);
   const [loading, setLoading] = useState(true);
   const [showSaveModal, setShowSaveModal] = useState(false);
 
-  // ─── Reactive Lookups ────────────────────────────────────────────────────────
-  // Check explicit match via URL query param identifier first
-  const isExplicitlySaved = comparisons.some((c) => c.id === urlSavedId);
+  // Derive colleges: if tray is empty, no colleges — no setState needed for that case
+  const colleges = compareIds.length === 0 ? [] : fetchedColleges;
 
-  // Structural combination matching check (independent fallback helper logic)
+  const isExplicitlySaved = comparisons.some((c) => c.id === urlSavedId);
   const currentTrayKey = [...compareIds].sort().join(",");
   const isStructuralMatchSaved = comparisons.some(
     (c) => [...c.collegeIds].sort().join(",") === currentTrayKey
   );
-
   const isCurrentComparisonSaved = isExplicitlySaved || isStructuralMatchSaved;
 
-  // Track dynamic title string label configuration values
   const matchingComparison = comparisons.find(
     (c) => c.id === urlSavedId || [...c.collegeIds].sort().join(",") === currentTrayKey
   );
@@ -176,7 +173,6 @@ export default function ComparePage() {
 
   useEffect(() => {
     if (compareIds.length === 0) {
-      setColleges([]);
       setLoading(false);
       return;
     }
@@ -188,12 +184,12 @@ export default function ComparePage() {
       .then((json) => {
         const map = new Map<string, College>((json.data as College[]).map((c) => [c.id, c]));
         const resolved = compareIds.map((id) => map.get(id)).filter(Boolean) as College[];
-        setColleges(resolved);
+        setFetchedColleges(resolved);
         if (resolved.length >= 2) {
           addRecentComparison(compareIds);
         }
       })
-      .catch(() => setColleges([]))
+      .catch(() => setFetchedColleges([]))
       .finally(() => setLoading(false));
   }, [compareIds]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -251,13 +247,9 @@ export default function ComparePage() {
                 )}
               >
                 {isCurrentComparisonSaved ? (
-                  <>
-                    <Check size={14} /> Saved!
-                  </>
+                  <><Check size={14} /> Saved!</>
                 ) : (
-                  <>
-                    <Heart size={14} /> Save
-                  </>
+                  <><Heart size={14} /> Save</>
                 )}
               </button>
             </div>
@@ -364,5 +356,16 @@ export default function ComparePage() {
 
       {showSaveModal && <SaveModal onSave={handleSave} onClose={() => setShowSaveModal(false)} colleges={colleges} />}
     </>
+  );
+}
+export default function ComparePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50/60 flex items-center justify-center">
+        <div className="text-sm text-gray-400">Loading...</div>
+      </div>
+    }>
+      <ComparePageInner />
+    </Suspense>
   );
 }

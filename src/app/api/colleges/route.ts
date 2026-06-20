@@ -102,19 +102,19 @@ export async function GET(req: NextRequest) {
         return 9999;
       })
     );
-    result = result.filter((c) => c.nirfRank <= maxRank);
+    result = result.filter((c) => c.nirfRank != null && c.nirfRank <= maxRank);
   }
 
   // Sort
   result = [...result].sort((a, b) => {
     switch (sortBy) {
-      case "nirfRank": return a.nirfRank - b.nirfRank;
+      case "nirfRank": return (a.nirfRank ?? 9999) - (b.nirfRank ?? 9999);
       case "rating": return b.overallRating - a.overallRating;
       case "avgPackage": return b.averagePackage - a.averagePackage;
       case "highestPackage": return b.highestPackage - a.highestPackage;
       case "fees": return a.startingFee - b.startingFee;
       case "placement": return b.placementPercentage - a.placementPercentage;
-      default: return a.nirfRank - b.nirfRank;
+      default: return (a.nirfRank ?? 9999) - (b.nirfRank ?? 9999);
     }
   });
 

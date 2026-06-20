@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { College, CollegeFilters } from "@/types";
 import FilterSidebar from "@/components/colleges/FilterSidebar";
@@ -25,7 +25,6 @@ const SORT_OPTIONS = [
   { label: "Best placement %", value: "placement" },
 ];
 
-// Maps homepage category names → course filter values
 const CATEGORY_COURSE_MAP: Record<string, string[]> = {
   Engineering: ["B.Tech", "BCA"],
   Management: ["MBA", "BBA"],
@@ -39,42 +38,42 @@ function countActiveFilters(f: CollegeFilters): number {
     f.nirfRange.length + f.courses.length + f.ownership.length;
 }
 
-export default function CollegesPage() {
+function CollegesPageInner() {
   const searchParams = useSearchParams();
   const urlSearch = searchParams.get("search") || "";
 
-  // On mount / URL change: resolve course filters from both ?course= and ?stream= params
-  const getInitialCourses = (): string[] => {
-    // ?course= can appear multiple times (e.g. ?course=B.Tech&course=BCA)
+  const getCoursesFromParams = (): string[] => {
     const coursesFromUrl = searchParams.getAll("course");
-    // ?stream= maps a category name to its courses
     const stream = searchParams.get("stream") || "";
     const coursesFromStream = CATEGORY_COURSE_MAP[stream] ?? [];
-    // merge, deduplicate
     return Array.from(new Set([...coursesFromUrl, ...coursesFromStream]));
   };
 
   const [filters, setFilters] = useState<CollegeFilters>({
     ...DEFAULT_FILTERS,
     search: urlSearch,
-    courses: getInitialCourses(),
+    courses: getCoursesFromParams(),
   });
+
+  // Sync search from URL during render (no effect needed)
+  const [prevUrlSearch, setPrevUrlSearch] = useState(urlSearch);
+  if (urlSearch !== prevUrlSearch) {
+    setPrevUrlSearch(urlSearch);
+    setFilters((f) => ({ ...f, search: urlSearch }));
+  }
+
+  // Sync courses from URL during render (no effect needed)
+  const [prevSearchParams, setPrevSearchParams] = useState(searchParams.toString());
+  if (searchParams.toString() !== prevSearchParams) {
+    setPrevSearchParams(searchParams.toString());
+    setFilters((f) => ({ ...f, courses: getCoursesFromParams() }));
+  }
+
   const [colleges, setColleges] = useState<College[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
-
-  // Keep search in sync with URL changes (e.g. header search bar)
-  useEffect(() => {
-    setFilters((f) => ({ ...f, search: urlSearch }));
-  }, [urlSearch]);
-
-  // Sync courses when URL params change (e.g. navigating from homepage pill)
-  useEffect(() => {
-    setFilters((f) => ({ ...f, courses: getInitialCourses() }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
 
   const fetchColleges = useCallback(async (f: CollegeFilters) => {
     setLoading(true);
@@ -116,7 +115,6 @@ export default function CollegesPage() {
   return (
     <div className="min-h-screen bg-gray-50/60 pb-24">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-8">
-        {/* Page Header with sort on the right */}
         <div className="flex items-center justify-between mb-6 gap-3">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Browse colleges</h1>
@@ -126,7 +124,6 @@ export default function CollegesPage() {
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            {/* Sort dropdown */}
             <div className="relative">
               <button
                 onClick={() => setSortOpen(!sortOpen)}
@@ -156,7 +153,6 @@ export default function CollegesPage() {
               )}
             </div>
 
-            {/* Mobile filter toggle */}
             <button
               className="lg:hidden flex items-center gap-2 px-3 py-2.5 bg-white border border-gray-200 rounded-xl text-sm shadow-sm"
               onClick={() => setMobileSidebarOpen(true)}
@@ -244,5 +240,16 @@ export default function CollegesPage() {
         </div>
       )}
     </div>
+  );
+}
+export default function CollegesPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50/60 flex items-center justify-center">
+        <div className="text-sm text-gray-400">Loading...</div>
+      </div>
+    }>
+      <CollegesPageInner />
+    </Suspense>
   );
 }

@@ -10,24 +10,22 @@ import { cn } from "@/lib/utils";
 export default function CompareTray() {
   const { compareIds, toggle, clear } = useCompareTrayStore();
   const router = useRouter();
-  const [colleges, setColleges] = useState<College[]>([]);
+  const [fetchedColleges, setFetchedColleges] = useState<College[]>([]);
 
-  // Fetch college details for chips
+  // Derive colleges: if tray is empty, no need for setState — render empty directly
+  const colleges = compareIds.length === 0 ? [] : fetchedColleges;
+
   useEffect(() => {
-    if (compareIds.length === 0) {
-      setColleges([]);
-      return;
-    }
+    if (compareIds.length === 0) return;
     const params = new URLSearchParams();
     compareIds.forEach((id) => params.append("ids", id));
     fetch(`/api/colleges?${params}`)
       .then((r) => r.json())
       .then((json) => {
-        // Filter to only the selected ones, preserving tray order
         const map = new Map<string, College>(
           (json.data as College[]).map((c) => [c.id, c])
         );
-        setColleges(compareIds.map((id) => map.get(id)).filter(Boolean) as College[]);
+        setFetchedColleges(compareIds.map((id) => map.get(id)).filter(Boolean) as College[]);
       })
       .catch(() => {});
   }, [compareIds]);

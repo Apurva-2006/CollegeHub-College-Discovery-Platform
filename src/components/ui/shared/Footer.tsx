@@ -35,7 +35,7 @@ export default function Footer() {
               <span className="font-bold text-gray-900 text-lg">CollegeHub</span>
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed max-w-[220px]">
-              India's most loved college discovery platform. Search, compare and shortlist
+              India&apos;s most loved college discovery platform. Search, compare and shortlist
               12K+ colleges with confidence.
             </p>
             <div className="flex items-center gap-3">

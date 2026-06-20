@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Heart, Search, LogIn, GraduationCap, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -11,15 +11,18 @@ export default function Header() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
+
+  const urlSearch = searchParams.get("search") || "";
+  const [searchValue, setSearchValue] = useState(urlSearch);
+  const [prevUrlSearch, setPrevUrlSearch] = useState(urlSearch);
+
+  // Sync search input when URL param changes (during render, no effect needed)
+  if (urlSearch !== prevUrlSearch) {
+    setPrevUrlSearch(urlSearch);
+    setSearchValue(urlSearch);
+  }
 
   const isSavedPage = pathname.startsWith("/saved");
-
-  // Keep the input in sync with the URL's "search" query param
-  // (works for /colleges?search=... and /saved?search=...)
-  useEffect(() => {
-    setSearchValue(searchParams.get("search") || "");
-  }, [searchParams]);
 
   const handleSearch = (value: string) => {
     setSearchValue(value);

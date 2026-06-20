@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 import { College } from "@/types";
 import { formatPackage, formatFee, formatReviewCount, cn } from "@/lib/utils";
 import { Heart, Scale, MapPin, Star, TrendingUp } from "lucide-react";
@@ -26,18 +26,24 @@ function getCover(college: College): string {
 
 interface Props {
   college: College;
-  rank?:number;
+  rank?: number;
+}
+
+// Hydration-safe mounted check using useSyncExternalStore
+function useIsMounted() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 }
 
 export default function CollegeCard({ college }: Props) {
   const { toggle: toggleSave, isSaved } = useSavedCollegesStore();
   const { toggle: toggleCompare, isInTray, compareIds } = useCompareTrayStore();
 
-  // Guard against SSR/client hydration mismatch from localStorage-persisted stores
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Hydration-safe: returns false on server, true on client
+  const mounted = useIsMounted();
 
   const saved = mounted && isSaved(college.id);
   const inCompare = mounted && isInTray(college.id);
@@ -52,12 +58,10 @@ export default function CollegeCard({ college }: Props) {
           alt={college.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        {/* NIRF badge */}
         <div className="absolute top-3 left-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm border border-purple-100 rounded-full px-2.5 py-1">
           <span className="text-[10px] font-bold text-[#6D28D9]">🏆</span>
           <span className="text-[11px] font-semibold text-gray-800">NIRF #{college.nirfRank}</span>
         </div>
-        {/* Save (heart) */}
         <button
           onClick={() => toggleSave(college.id)}
           className={cn(
@@ -94,7 +98,6 @@ export default function CollegeCard({ college }: Props) {
           </div>
         </div>
 
-        {/* Rating + Ownership */}
         <div className="flex items-center gap-2 mt-2.5">
           <div className="flex items-center gap-1 bg-amber-50 rounded-full px-2 py-0.5">
             <Star size={11} className="text-amber-400 fill-amber-400" />
