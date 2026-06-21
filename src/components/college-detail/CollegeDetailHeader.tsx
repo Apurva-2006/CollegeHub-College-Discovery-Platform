@@ -66,11 +66,11 @@ export default function CollegeDetailHeader({ college }: Props) {
                     className={cn(
                       'flex items-center gap-1.5 px-3 py-2 rounded-xl border text-sm font-medium transition-colors',
                       saved
-                        ? 'bg-purple-50 border-purple-200 text-[#6D28D9]'
+                        ? 'bg-rose-50 border-rose-200 text-[#FB7185]'
                         : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
                     )}
                   >
-                    <Heart size={14} className={saved ? 'fill-[#6D28D9]' : ''} />
+                    <Heart size={14} className={saved ? 'fill-[#FB7185]' : ''} />
                     {saved ? 'Saved' : 'Save'}
                   </button>
                   <button
